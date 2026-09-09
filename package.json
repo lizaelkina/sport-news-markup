@@ -1,0 +1,99 @@
+{
+  "name": "sport-news-markup",
+  "author": "Liza Elkina",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizaelkina/sport-news.git"
+  },
+  "homepage": "https://github.com/lizaelkina/sport-news",
+  "bugs": {
+    "url": "https://github.com/lizaelkina/sport-news/issues"
+  },
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "build:apache": "gulp buildApache",
+    "build:views": "gulp views",
+    "build:styles": "gulp styles",
+    "build:scripts": "gulp scripts",
+    "build:images": "gulp images",
+    "build:sprites": "gulp sprites",
+    "build:fonts": "gulp fonts",
+    "build:files": "gulp files",
+    "build:favicons": "gulp favicons",
+    "build:webp": "gulp images",
+    "lint": "yarn lint:scripts && yarn lint:styles",
+    "lint:fix": "yarn lint:scripts:fix && yarn lint:styles:fix",
+    "lint:scripts": "eslint .",
+    "lint:scripts:fix": "eslint . --fix",
+    "lint:styles": "stylelint \"src/**/*.scss\"",
+    "lint:styles:fix": "stylelint \"src/**/*.scss\" --fix",
+    "test:setup": "playwright install chromium",
+    "test:build": "node --test \"tests/build/*.test.mjs\"",
+    "test:integration": "node --test \"tests/integration/*.test.mjs\"",
+    "test:browser": "node --test \"tests/browser/*.test.mjs\"",
+    "verify": "yarn lint && yarn test:build && yarn build",
+    "verify:full": "yarn verify && yarn test:integration && yarn test:browser",
+    "deploy": "yarn verify && gh-pages -d dist --nojekyll",
+    "deploy:clean": "gh-pages-clean",
+    "bem-c": "node scripts/create-block.mjs components",
+    "bem-m": "node scripts/create-block.mjs modules",
+    "postinstall": "husky"
+  },
+  "devDependencies": {
+    "@babel/core": "8.0.1",
+    "@babel/preset-env": "8.0.2",
+    "@eslint/js": "10.0.1",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "@stylistic/stylelint-plugin": "5.3.0",
+    "autoprefixer": "10.5.5",
+    "babel-loader": "10.1.1",
+    "browser-sync": "3.0.4",
+    "cssnano": "9.0.3",
+    "eslint": "10.10.0",
+    "favicons": "7.3.1",
+    "gh-pages": "6.3.0",
+    "globals": "17.12.0",
+    "gulp": "5.0.1",
+    "gulp-postcss": "10.0.0",
+    "gulp-pug": "5.0.0",
+    "gulp-sass": "6.0.1",
+    "gulp-svg-sprite": "2.0.3",
+    "husky": "9.1.7",
+    "lint-staged": "17.5.0",
+    "playwright": "1.63.0",
+    "postcss": "8.5.28",
+    "postcss-scss": "4.0.9",
+    "sass": "1.104.0",
+    "sharp": "0.35.4",
+    "source-map-js": "1.2.1",
+    "stylelint": "17.15.0",
+    "stylelint-config-standard-scss": "17.0.0",
+    "stylelint-order": "8.1.1",
+    "stylelint-selector-bem-pattern": "5.0.0",
+    "svgo": "4.1.0",
+    "webpack": "5.110.3"
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs}": "eslint --fix --no-warn-ignored",
+    "*.scss": "stylelint --fix --allow-empty-input"
+  },
+  "packageManager": "yarn@4.18.0",
+  "volta": {
+    "node": "24.20.0",
+    "yarn": "4.18.0"
+  },
+  "private": true,
+  "dependenciesMeta": {
+    "@parcel/watcher": {
+      "built": true
+    },
+    "es5-ext": {
+      "built": false
+    }
+  },
+  "engines": {
+    "node": ">=24.20.0 <25"
+  }
+}

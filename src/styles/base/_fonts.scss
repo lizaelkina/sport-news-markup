@@ -1,0 +1,107 @@
+@font-face {
+  font-family: Barlow;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Barlow Regular"),
+    local("BarlowRegular"),
+    local("Barlow-Regular"),
+    url("../fonts/BarlowRegular.woff2") format("woff2"),
+    url("../fonts/BarlowRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local("Barlow Medium"),
+    local("BarlowMedium"),
+    local("Barlow-Medium"),
+    url("../fonts/BarlowMedium.woff2") format("woff2"),
+    url("../fonts/BarlowMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local("Barlow SemiBold"),
+    local("BarlowSemiBold"),
+    local("Barlow-SemiBold"),
+    url("../fonts/BarlowSemiBold.woff2") format("woff2"),
+    url("../fonts/BarlowSemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Barlow Bold"),
+    local("BarlowBold"),
+    local("Barlow-Bold"),
+    url("../fonts/BarlowBold.woff2") format("woff2"),
+    url("../fonts/BarlowBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: local("Barlow Black"),
+    local("BarlowBlack"),
+    local("Barlow-Black"),
+    url("../fonts/BarlowBlack.woff2") format("woff2"),
+    url("../fonts/BarlowBlack.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("DMSans Regular"),
+    local("DMSansRegular"),
+    local("DMSans-Regular"),
+    url("../fonts/DMSansRegular.woff2") format("woff2"),
+    url("../fonts/DMSansRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local("DMSans Medium"),
+    local("DMSansMedium"),
+    local("DMSans-Medium"),
+    url("../fonts/DMSansMedium.woff2") format("woff2"),
+    url("../fonts/DMSansMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local("DMSans SemiBold"),
+    local("DMSansSemiBold"),
+    local("DMSans-SemiBold"),
+    url("../fonts/DMSansSemiBold.woff2") format("woff2"),
+    url("../fonts/DMSansSemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("DMSans Bold"),
+    local("DMSansBold"),
+    local("DMSans-Bold"),
+    url("../fonts/DMSansBold.woff2") format("woff2"),
+    url("../fonts/DMSansBold.woff") format("woff");
+}

@@ -1,0 +1,6 @@
+mixin img(src, alt)
+  img(src=src + '.webp', alt=alt, loading='lazy')&attributes(attributes)
+
+mixin svg(name)
+  svg(data-svg=name aria-hidden='true' role='presentation')&attributes(attributes)
+    use(href=`./img/sprites/sprite.svg#${name}`)

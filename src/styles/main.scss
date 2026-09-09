@@ -1,0 +1,13 @@
+// CSS custom properties must precede vendor and component styles.
+@use "base/tokens";
+
+// CSS-файлы библиотек
+@use "vendor/libs";
+
+// Основное
+@use "base/fonts";
+@use "base/general";
+
+// БЭМ-блоки
+@use "../blocks/components/components";
+@use "../blocks/modules/modules";
