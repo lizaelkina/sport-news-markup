@@ -1,1 +1,19 @@
-// Styles will be added here.
+// fonts
+$font: "DM Sans", arial, helvetica, "San Francisco", roboto, sans-serif;
+$font-accent: Barlow, "DM Sans", Arial, Helvetica, "San Francisco", Roboto, sans-serif;
+
+// colors
+$primary: var(--color-1);
+$secondary: var(--color-2);
+$text-accent: var(--color-3);
+$text-gradient: linear-gradient(180deg, var(--color-1) 0%, var(--color-5) 100%);
+$text-thin: rgb(from var(--color-1) r g b / 60%);
+$text-description: var(--color-8);
+$text-transparent: var(--color-5);
+$text-placeholder: rgb(from var(--color-1) r g b / 37%);
+$block-gradient: linear-gradient(360deg, var(--color-4) 35.23%, var(--color-4) 100%);
+$block-accent-gradient: linear-gradient(108.74deg, rgb(from var(--color-3) r g b / 24%) 0%, rgb(from var(--color-3) r g b / 6%) 100%);
+$slider-button-disabled: var(--color-7);
+
+// blocks
+$block-radius: 6px;
