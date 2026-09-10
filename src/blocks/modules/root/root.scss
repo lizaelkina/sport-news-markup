@@ -1,1 +1,20 @@
-// Styles will be added here.
+@use "../../../styles/helpers/variables" as vars;
+
+.root {
+  font-family: vars.$font;
+  background-color: vars.$background;
+  color: vars.$primary;
+}
+
+.root::-webkit-scrollbar {
+  width: 6px;
+}
+
+.root::-webkit-scrollbar-track {
+  background-color: vars.$secondary;
+}
+
+.root::-webkit-scrollbar-thumb {
+  background-color: vars.$primary;
+  border-radius: 5px;
+}

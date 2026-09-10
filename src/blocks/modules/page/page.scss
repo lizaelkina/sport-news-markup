@@ -1,1 +1,13 @@
-// Styles will be added here.
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+}
