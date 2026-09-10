@@ -1,0 +1,19 @@
+mixin header-link(name, href)
+  li
+    a.header__link(href=href)&attributes(attributes)= name
+
+header.header.page__header
+  div.header__container
+    a.header__logo(href='#')
+      +img('./img/logo', 'Logo Sport News').header__img
+    nav.header__nav
+      ul.header__list
+        +header-link('Home', '#').header__link_active
+        +header-link('Category', '#')
+        +header-link('Trending News', '#')
+        +header-link('Recent News', '#')
+        +header-link('Clubs Ranking', '#')
+        +header-link('Sports Article', '#')
+    button(type='button').header__button
+      +svg('icon-search').header__svg
+      span.header__button-text Search

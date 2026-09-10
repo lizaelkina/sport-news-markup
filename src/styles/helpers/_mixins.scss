@@ -1,1 +1,24 @@
 @use "variables" as vars;
+
+// hover
+@mixin link-hover() {
+  position: relative;
+  padding-bottom: 1px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: .5px;
+    transition: .5s;
+    background-color: vars.$text-thin;
+  }
+
+  @media (any-hover: hover) {
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
