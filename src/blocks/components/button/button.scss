@@ -1,0 +1,46 @@
+@use "../../../styles/helpers/variables" as vars;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px 15px;
+  transition: background-color .5s ease;
+  gap: 10px;
+  border-radius: 6px;
+  background-color: vars.$button;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: vars.$primary;
+    }
+  }
+
+  &__icon {
+    padding: 2px;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  &__svg {
+    width: 16px;
+    height: 16px;
+    fill: vars.$accent;
+
+    &_icon {
+      width: 24px;
+      height: 24px;
+      fill: vars.$primary;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: .01em;
+    color: vars.$accent;
+  }
+}
