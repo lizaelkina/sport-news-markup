@@ -1,0 +1,28 @@
+mixin new-today(img, title, description)
+  article.new-today
+    +img(img, title).new-today__img
+    a.new-today__container(href='#')
+      p.new-today__description= description
+      h4.new-today__title= title
+
+section.intro
+  +img('./img/intro-player', 'Basketball player')(aria-hidden='true' role='presentation').intro__img
+  div.intro__left
+    div.intro__container
+      h2.intro__title
+        | Top#[br]scorer to the&nbsp;final match
+      div.intro__wrapper
+        p.intro__subtitle
+          | The EuroLeague Finals Top Scorer is&nbsp;the
+          | individual award for the player that gained
+          | the highest points in&nbsp;the EuroLeague Finals
+        button(type='button').button.button_secondary.intro__button
+          span.button__title-secondary
+            | Continue reading
+    div.intro__right
+      div.intro__label
+        p.intro__label-text
+          | Today
+      div.intro__news
+        +new-today('./img/intro-new-1', 'Ethiopian runners took the top four spots ', 'Race98 - 03 June 2023')
+        +new-today('./img/intro-new-2', 'IndyCar Detroit: Dixon quickest in second practice', 'INDYCAR - 03 June 2023')

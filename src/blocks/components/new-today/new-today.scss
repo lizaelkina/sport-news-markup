@@ -1,0 +1,51 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.new-today {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: vars.$block-radius;
+
+  &__img {
+    aspect-ratio: 270 / 233;
+    border-radius: vars.$block-radius;
+    background-color: vars.$button;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    padding: 0 18px 12px;
+    margin-top: -65px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+
+  &__description {
+    @include mixins.text-overflow(1);
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 101%;
+    color: vars.$text-thin;
+  }
+
+  &__title {
+    @include mixins.text-overflow(2);
+
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 124%;
+    color: vars.$primary;
+  }
+}

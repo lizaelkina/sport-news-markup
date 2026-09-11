@@ -30,3 +30,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// text overflow
+@mixin text-overflow($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}

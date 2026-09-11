@@ -1,9 +1,11 @@
 @use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
 
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
   border: none;
   padding: 10px 15px;
   transition: background-color .5s ease;
@@ -15,6 +17,17 @@
   @media (any-hover: hover) {
     &:hover {
       background-color: vars.$primary;
+    }
+  }
+
+  &_secondary {
+    padding: 12px 31px;
+    background-color: vars.$primary;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: vars.$button;
+      }
     }
   }
 
@@ -37,10 +50,23 @@
   }
 
   &__title {
+    @include mixins.text-overflow(1);
+
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: .01em;
     color: vars.$accent;
+  }
+
+  &__title-secondary {
+    @include mixins.text-overflow(1);
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 190%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: vars.$secondary;
   }
 }
