@@ -3,10 +3,10 @@ mixin new-today(img, title, description)
     +img(img, title).new-today__img
     a.new-today__container(href='#')
       p.new-today__description= description
-      h4.new-today__title= title
+      h3.new-today__title= title
 
 section.intro
-  +img('./img/intro-player', 'Basketball player')(aria-hidden='true' role='presentation').intro__img
+  +img('./img/intro-player', 'Basketball player')(aria-hidden='true').intro__img
   div.intro__left
     div.intro__container
       h2.intro__title
