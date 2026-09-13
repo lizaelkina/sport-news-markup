@@ -1,0 +1,108 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    @include mixins.section-title;
+    @include mixins.text-overflow(1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    height: 100%;
+    margin: 0;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 24px;
+    border-radius: vars.$block-radius;
+    background-color: vars.$secondary;
+
+    &_bottom {
+      order: 1;
+    }
+  }
+
+  &__name {
+    @include mixins.text-overflow(2);
+
+    font-family: vars.$font-accent;
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 37px);
+    line-height: 105%;
+    text-transform: uppercase;
+    text-align: center;
+    background: vars.$text-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    border-radius: vars.$block-radius;
+    background-color: vars.$button;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .category__list {
+    gap: 24px;
+  }
+
+  .category__card {
+    gap: 10px;
+  }
+
+  .category__label {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .category__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .category__label {
+    padding: 16px;
+
+    &_bottom {
+      order: 0;
+    }
+  }
+
+  .category__img {
+    max-height: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category__list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 16px;
+  }
+}

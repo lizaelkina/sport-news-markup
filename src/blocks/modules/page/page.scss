@@ -3,12 +3,13 @@
   flex-direction: column;
 
   &__header {
+    width: 100%;
+    min-width: 320px;
     margin-bottom: 20px;
   }
 
   &__container {
     width: 100%;
-    min-width: 320px;
     max-width: 1170px;
     margin: 0 auto;
   }

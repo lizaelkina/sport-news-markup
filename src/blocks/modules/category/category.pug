@@ -1,0 +1,15 @@
+mixin category-card(src, title)
+  li
+    figure.category__card
+      figcaption.category__label&attributes(attributes)
+        a.category__name(href='#')= title
+      +img(src, title).category__img
+
+section.category.page__container
+  h2.category__title
+    | Category
+  ul.category__list
+    +category-card('./img/category-1', 'Football')
+    +category-card('./img/category-2', 'Basket ball').category__label_bottom
+    +category-card('./img/category-3', 'Car sport')
+    +category-card('./img/category-4', 'Table tennis').category__label_bottom
