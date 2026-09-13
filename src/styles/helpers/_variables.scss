@@ -12,6 +12,7 @@ $text-gradient: linear-gradient(180deg, var(--color-1) 0%, var(--color-6) 100%);
 $text-thin: rgb(from var(--color-1) r g b / 60%);
 $text-description: var(--color-8);
 $text-placeholder: rgb(from var(--color-1) r g b / 37%);
+$button-shadow: rgb(from var(--color-1) r g b / 25%);
 $block-gradient: linear-gradient(to bottom, rgb(from var(--color-5) r g b / 0%) 0, var(--color-5) 60px);
 $block-accent-gradient: linear-gradient(to bottom, rgb(from var(--color-4) r g b / 24%) 0%, rgb(from var(--color-4) r g b / 6%) 100%);
 $slider-button-disabled: var(--color-7);

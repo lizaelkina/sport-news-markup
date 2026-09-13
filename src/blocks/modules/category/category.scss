@@ -24,6 +24,12 @@
     position: relative;
     height: 100%;
     margin: 0;
+
+    @media (any-hover: hover) {
+      &:hover .category__img {
+        @include mixins.card-hover;
+      }
+    }
   }
 
   &__label {
@@ -61,7 +67,15 @@
     }
   }
 
+  &__img-wrapper {
+    height: 100%;
+    border-radius: vars.$block-radius;
+    overflow: hidden;
+  }
+
   &__img {
+    @include mixins.img-hover;
+
     height: 100%;
     border-radius: vars.$block-radius;
     background-color: vars.$button;

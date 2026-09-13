@@ -23,10 +23,11 @@
   &_secondary {
     padding: 12px 31px;
     background-color: vars.$primary;
+    transition: box-shadow .5s ease;
 
     @media (any-hover: hover) {
       &:hover {
-        background-color: vars.$button;
+        box-shadow: 0 0 30px 20px vars.$button-shadow, 0 0 8px 8px vars.$button-shadow;
       }
     }
   }

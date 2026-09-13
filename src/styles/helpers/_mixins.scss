@@ -23,6 +23,15 @@
   }
 }
 
+@mixin card-hover() {
+  transform: scale(1.2);
+  filter: brightness(80%);
+}
+
+@mixin img-hover() {
+  transition: transform .5s ease, filter .5s ease;
+}
+
 // absolute position center
 @mixin position-center {
   position: absolute;

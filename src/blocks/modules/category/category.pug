@@ -3,7 +3,8 @@ mixin category-card(src, title)
     figure.category__card
       figcaption.category__label&attributes(attributes)
         a.category__name(href='#')= title
-      +img(src, title).category__img
+      div.category__img-wrapper
+        +img(src, title).category__img
 
 section.category.page__container
   h2.category__title
