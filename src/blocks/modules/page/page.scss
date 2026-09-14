@@ -1,6 +1,9 @@
 .page {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
 
   &__header {
     width: 100%;
@@ -8,10 +11,28 @@
     margin-bottom: 20px;
   }
 
-  &__container {
+  &__intro {
     width: 100%;
-    max-width: 1170px;
+    min-width: 320px;
+    max-width: 1440px;
     margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__section {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1202px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &_slider {
+      max-width: 1170px;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 

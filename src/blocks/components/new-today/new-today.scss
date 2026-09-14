@@ -30,7 +30,7 @@
     flex-direction: column;
     z-index: 1;
     height: 100%;
-    padding: 66px 18px 12px;
+    padding: 64px 18px 12px;
     gap: 4px;
     margin-top: -130px;
     background: vars.$block-gradient;
@@ -56,9 +56,10 @@
   &__title {
     @include mixins.text-overflow(2);
 
-    min-height: 38px;
+    min-height: 40px;
+    font-family: vars.$font-accent;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 124%;
     color: vars.$primary;
   }
