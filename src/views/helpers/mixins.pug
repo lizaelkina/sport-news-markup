@@ -7,3 +7,14 @@ mixin svg(name)
 
 mixin link(name, href)
   a.link(href=href)&attributes(attributes)= name
+
+mixin slide(src, label, description, title, subtitle)
+  article.slide&attributes(attributes)
+    +img(src, title).slide__img
+    div.label
+      p.label__text= label
+    a.slide__title-wrapper(href='#')
+      p.slide__description= description
+      h3.slide__title= title
+      if subtitle
+        p.slide__subtitle= subtitle

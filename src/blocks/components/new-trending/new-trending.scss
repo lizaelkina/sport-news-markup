@@ -1,0 +1,147 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.new-trending {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  gap: 20px;
+  border-radius: vars.$block-radius;
+
+  @media (any-hover: hover) {
+    &:hover .new-trending__img {
+      @include mixins.card-hover;
+    }
+  }
+
+  &_first {
+    align-items: center;
+
+    .new-trending__container::before {
+      display: none;
+    }
+  }
+
+  &__img-wrapper {
+    flex: .84;
+    width: 100%;
+    height: 100%;
+    border-radius: vars.$block-radius;
+    overflow: hidden;
+  }
+
+  &__img {
+    @include mixins.img-hover;
+
+    height: 100%;
+    aspect-ratio: 234 / 150;
+    border-radius: vars.$block-radius;
+    background-color: vars.$button;
+  }
+
+  &__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      max-width: 279px;
+      margin-bottom: 11px;
+      padding-top: 0;
+      border-top: 1px solid vars.$button;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+
+  &__description {
+    @include mixins.text-overflow(1);
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 103%;
+    color: vars.$text-thin;
+  }
+
+  &__title {
+    @include mixins.text-overflow(2);
+
+    width: 100%;
+    max-width: 245px;
+    font-family: vars.$font-accent;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 137%;
+    color: vars.$primary;
+  }
+
+  &__subtitle {
+    @include mixins.text-overflow(3);
+
+    width: 100%;
+    max-width: 239px;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 124%;
+    color: vars.$text-description;
+  }
+}
+
+@media screen and (max-width: 879px) {
+  .new-trending {
+    align-items: start;
+
+    &_first {
+      .new-trending__container {
+        padding-top: 10px;
+      }
+    }
+
+    &__img-wrapper {
+      min-width: min(200px, 100%);
+    }
+
+    &__title {
+      max-width: 350px;
+    }
+
+    &__subtitle {
+      max-width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .new-trending {
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+
+    &_first {
+      .new-trending__container {
+        padding-top: 0;
+      }
+    }
+
+    &__container::before {
+      display: none;
+    }
+
+    &__subtitle {
+      margin-top: 5px;
+    }
+  }
+}

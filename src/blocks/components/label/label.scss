@@ -1,0 +1,18 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.label {
+  width: fit-content;
+  border: 1px solid vars.$secondary;
+  padding: 6px 19px;
+  border-radius: 3px;
+
+  &__text {
+    @include mixins.text-overflow(1);
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 115%;
+    color: vars.$secondary;
+  }
+}

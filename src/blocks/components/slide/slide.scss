@@ -1,0 +1,73 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 31px 48px 45px;
+  gap: 40px;
+  border-radius: vars.$block-radius;
+
+  &_small {
+    min-height: 400px;
+    padding: 31px 36px 36px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover .slide__img {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    transition: transform .5s ease;
+    object-position: bottom;
+    inset: 0;
+    border-radius: vars.$block-radius;
+    filter: brightness(40%);
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+  }
+
+  &__description {
+    @include mixins.text-overflow(1);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 103%;
+    color: vars.$accent;
+  }
+
+  &__title {
+    @include mixins.text-overflow(3);
+
+    width: 100%;
+    max-width: 650px;
+    font-family: vars.$font-accent;
+    font-weight: 900;
+    font-size: clamp(24px, 6vw, 36px);
+    line-height: 114%;
+    text-transform: uppercase;
+    color: vars.$accent;
+  }
+}
