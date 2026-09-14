@@ -4,7 +4,12 @@
   gap: 80px;
   width: 100%;
   min-width: 320px;
-  padding: 0 16px 80px;
+  padding-bottom: 80px;
+
+  &__padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 @media screen and (max-width: 1024px) {

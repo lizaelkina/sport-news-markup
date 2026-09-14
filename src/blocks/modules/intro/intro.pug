@@ -5,7 +5,7 @@ mixin new-today(img, title, description)
       p.new-today__description= description
       h3.new-today__title= title
 
-section.intro
+section.intro.content__padding
   +img('./img/intro-player', 'Basketball player')(aria-hidden='true').intro__img
   div.intro__left
     div.intro__container
@@ -23,6 +23,8 @@ section.intro
       div.intro__label
         p.intro__label-text
           | Today
-      div.intro__news
-        +new-today('./img/intro-new-1', 'Ethiopian runners took the top four spots ', 'Race98 - 03 June 2023')
-        +new-today('./img/intro-new-2', 'IndyCar Detroit: Dixon quickest in second practice', 'INDYCAR - 03 June 2023')
+      ul.intro__news
+        li
+          +new-today('./img/intro-new-1', 'Ethiopian runners took the top four spots ', 'Race98 - 03 June 2023')
+        li
+          +new-today('./img/intro-new-2', 'IndyCar Detroit: Dixon quickest in second practice', 'INDYCAR - 03 June 2023')
