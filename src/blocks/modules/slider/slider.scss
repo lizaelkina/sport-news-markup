@@ -1,0 +1,26 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: vars.$block-radius;
+  background-color: vars.$secondary;
+  overflow: hidden;
+
+  &__controls {
+    align-self: flex-end;
+    padding: 0 25px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    gap: 16px;
+
+    &__controls {
+      padding: 0 16px 16px;
+    }
+  }
+}

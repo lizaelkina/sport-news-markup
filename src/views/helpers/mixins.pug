@@ -18,3 +18,11 @@ mixin slide(src, label, description, title, subtitle)
       h3.slide__title= title
       if subtitle
         p.slide__subtitle= subtitle
+
+mixin button-prev
+  button(type='button').swiper-prev&attributes(attributes)
+    +svg('icon-arrow-slide').swiper-prev__svg
+
+mixin button-next
+  button(type='button').swiper-next&attributes(attributes)
+    +svg('icon-arrow-slide').swiper-next__svg

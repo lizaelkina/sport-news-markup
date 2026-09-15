@@ -19,6 +19,7 @@
   }
 
   &_big {
+    min-height: 518px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -78,7 +79,7 @@
     @include mixins.text-overflow(5);
 
     width: 100%;
-    max-width: 700px;
+    max-width: 705px;
     font-weight: 500;
     font-size: clamp(18px, 3vw, 20px);
     line-height: 140%;
