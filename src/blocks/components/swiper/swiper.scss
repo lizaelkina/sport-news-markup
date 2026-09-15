@@ -53,8 +53,9 @@
 
 .swiper-pagination {
   display: flex;
+  flex-wrap: wrap;
   position: static;
-  gap: clamp(0px, 1.5vw, 20px);
+  gap: 5px clamp(0px, 1.5vw, 20px);
 }
 
 .swiper-pagination-bullet {
@@ -72,6 +73,13 @@
   color: vars.$primary;
   opacity: .6;
   background-color: transparent;
+  transition: opacity .5s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .swiper-pagination-bullet-active {
