@@ -2,12 +2,13 @@
 
 .swiper {
   width: 100%;
+  height: 100%;
 }
 
 .swiper-controls {
   display: flex;
   align-items: center;
-  gap: 56px;
+  gap: 39px;
 
   &_small {
     gap: 30px;
@@ -50,9 +51,53 @@
   pointer-events: none;
 }
 
+.swiper-pagination {
+  display: flex;
+  position: static;
+  gap: 28px;
+}
+
+.swiper-pagination-bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-family: vars.$font-accent;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: vars.$primary;
+  opacity: .6;
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  font-weight: 700;
+  color: vars.$secondary;
+  opacity: 1;
+  background-color: vars.$primary;
+}
+
 @media screen and (max-width: 768px) {
+  .swiper-controls {
+    gap: 16px;
+  }
+
   .swiper-prev, .swiper-next {
-    width: 50px;
-    height: 40px;
+    width: 40px;
+    height: 30px;
+  }
+
+  .swiper-pagination {
+    gap: 0;
+  }
+
+  .swiper-pagination-bullet {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
   }
 }
