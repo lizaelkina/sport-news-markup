@@ -1,10 +1,3 @@
-mixin new-today(img, title, description)
-  article.new-today
-    +img(img, title).new-today__img
-    a.new-today__container(href='#')
-      p.new-today__description= description
-      h3.new-today__title= title
-
 section.intro.page__intro
   +img('./img/intro-player', 'Basketball player')(aria-hidden='true').intro__img
   div.intro__left
@@ -25,6 +18,6 @@ section.intro.page__intro
           | Today
       ul.intro__news
         li
-          +new-today('./img/intro-new-1', 'Ethiopian runners took the top four spots ', 'Race98 - 03 June 2023')
+          +new-today('./img/intro-new-1', 'Ethiopian runners took the top four spots', 'Race98 - 03 June 2023')
         li
           +new-today('./img/intro-new-2', 'IndyCar Detroit: Dixon quickest in second practice', 'INDYCAR - 03 June 2023')

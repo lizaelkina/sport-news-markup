@@ -1,0 +1,25 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.recent-news {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    @include mixins.section-title;
+    @include mixins.text-overflow(1);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  &__more {
+    border-radius: vars.$block-radius;
+    background-color: vars.$secondary;
+  }
+}

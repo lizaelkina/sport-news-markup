@@ -5,6 +5,14 @@ mixin svg(name)
   svg(data-svg=name aria-hidden='true' role='presentation')&attributes(attributes)
     use(href=`./img/sprites/sprite.svg#${name}`)
 
+mixin button-prev
+  button(type='button').swiper-prev&attributes(attributes)
+    +svg('icon-arrow-slide').swiper-prev__svg
+
+mixin button-next
+  button(type='button').swiper-next&attributes(attributes)
+    +svg('icon-arrow-slide').swiper-next__svg
+
 mixin link(name, href)
   a.link(href=href)&attributes(attributes)= name
 
@@ -19,10 +27,17 @@ mixin slide(src, label, description, title, subtitle)
       if subtitle
         p.slide__subtitle= subtitle
 
-mixin button-prev
-  button(type='button').swiper-prev&attributes(attributes)
-    +svg('icon-arrow-slide').swiper-prev__svg
+mixin new-today(img, title, description)
+  article.new
+    +img(img, title).new__img.new__img_today
+    a.new__container.new__container_today(href='#')
+      p.new__description.new__description_today= description
+      h3.new__title.new__title_today= title
 
-mixin button-next
-  button(type='button').swiper-next&attributes(attributes)
-    +svg('icon-arrow-slide').swiper-next__svg
+mixin new-recent(img, title, description)
+  article.new
+    a(href='#')
+      +img(img, title).new__img.new__img_recent
+      div.new__container.new__container_recent
+        p.new__description.new__description_recent= description
+        h3.new__title.new__title_recent= title

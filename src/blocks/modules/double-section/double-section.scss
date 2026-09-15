@@ -1,0 +1,9 @@
+.double-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  &__clubs-ranking {
+    flex: 1;
+  }
+}
