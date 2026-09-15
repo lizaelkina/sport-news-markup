@@ -30,6 +30,7 @@
   }
 
   &__right {
+    display: flex;
     flex: 2.14;
     min-width: min(376px, 100%);
   }

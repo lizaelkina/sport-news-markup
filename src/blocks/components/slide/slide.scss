@@ -8,7 +8,6 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
   overflow: hidden;
   padding: 31px 48px 45px;
   gap: 40px;
@@ -17,6 +16,11 @@
   &_small {
     min-height: 400px;
     padding: 31px 36px 36px;
+  }
+
+  &_big {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   @media (any-hover: hover) {
@@ -32,7 +36,6 @@
     transition: transform .5s ease;
     object-position: bottom;
     inset: 0;
-    border-radius: vars.$block-radius;
     filter: brightness(40%);
   }
 
@@ -53,8 +56,8 @@
     @include mixins.text-overflow(1);
 
     font-weight: 400;
-    font-size: 18px;
-    line-height: 103%;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 110%;
     color: vars.$accent;
   }
 
@@ -65,9 +68,26 @@
     max-width: 650px;
     font-family: vars.$font-accent;
     font-weight: 900;
-    font-size: clamp(24px, 6vw, 36px);
+    font-size: clamp(22px, 6vw, 36px);
     line-height: 114%;
     text-transform: uppercase;
     color: vars.$accent;
+  }
+
+  &__subtitle {
+    @include mixins.text-overflow(5);
+
+    width: 100%;
+    max-width: 700px;
+    font-weight: 500;
+    font-size: clamp(18px, 3vw, 20px);
+    line-height: 140%;
+    color: vars.$accent;
+  }
+}
+
+@media screen and (max-width: 879px) {
+  .slide {
+    padding: 30px 16px;
   }
 }
