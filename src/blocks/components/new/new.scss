@@ -6,7 +6,6 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: auto;
   overflow: hidden;
   border-radius: vars.$block-radius;
 
@@ -16,9 +15,14 @@
     }
   }
 
+  &__wrapper {
+    height: 100%;
+  }
+
   &__img {
     @include mixins.img-hover;
 
+    height: 100%;
     background-color: vars.$button;
 
     &_today {
@@ -35,25 +39,20 @@
   &__container {
     display: flex;
     flex-direction: column;
+    position: absolute;
     z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     gap: 4px;
 
     &_today {
       padding: 64px 18px 12px;
-      margin-top: -130px;
       background: vars.$block-gradient;
-
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-      }
     }
 
     &_recent {
       padding: 16px 18px 12px;
-      margin-top: -83px;
       background: vars.$block-accent-gradient;
       backdrop-filter: blur(100px);
       box-shadow: 0 0 50px -25px rgb(0 0 0 / 50%);

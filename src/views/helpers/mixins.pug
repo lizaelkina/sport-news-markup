@@ -29,16 +29,17 @@ mixin slide(src, label, description, title, subtitle)
 
 mixin new-today(img, description, title)
   article.new&attributes(attributes)
-    +img(img, title).new__img.new__img_today
-    a.new__container.new__container_today(href='#')
-      p.new__description.new__description_today= description
-      h3.new__title.new__title_today= title
+    a(href='#').new__wrapper
+      +img(img, title).new__img.new__img_today
+      hgroup.new__container.new__container_today
+        p.new__description.new__description_today= description
+        h3.new__title.new__title_today= title
 
 mixin new-recent(img, description, title)
   article.new&attributes(attributes)
-    a(href='#')
+    a(href='#').new__wrapper
       +img(img, title).new__img.new__img_recent
-      div.new__container.new__container_recent
+      hgroup.new__container.new__container_recent
         p.new__description.new__description_recent= description
         h3.new__title.new__title_recent= title
 
