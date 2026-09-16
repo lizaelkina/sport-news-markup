@@ -28,16 +28,33 @@ mixin slide(src, label, description, title, subtitle)
         p.slide__subtitle= subtitle
 
 mixin new-today(img, title, description)
-  article.new
+  article.new&attributes(attributes)
     +img(img, title).new__img.new__img_today
     a.new__container.new__container_today(href='#')
       p.new__description.new__description_today= description
       h3.new__title.new__title_today= title
 
 mixin new-recent(img, title, description)
-  article.new
+  article.new&attributes(attributes)
     a(href='#')
       +img(img, title).new__img.new__img_recent
       div.new__container.new__container_recent
         p.new__description.new__description_recent= description
         h3.new__title.new__title_recent= title
+
+mixin new-trending(src, description, title, subtitle)
+  article.new-trending&attributes(attributes)
+    div.new-trending__img-wrapper
+      +img(src, title).new-trending__img
+    a.new-trending__container(href='#')
+      p.new-trending__description= description
+      h3.new-trending__title= title
+      p.new-trending__subtitle= subtitle
+
+mixin new-more(src, description, title)
+  article.new-more&attributes(attributes)
+    div.new-more__img-wrapper
+      +img(src, title).new-more__img
+    a.new-more__container(href='#')
+      p.new-more__description= description
+      h3.new-more__title= title
