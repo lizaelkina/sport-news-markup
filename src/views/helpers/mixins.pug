@@ -27,14 +27,14 @@ mixin slide(src, label, description, title, subtitle)
       if subtitle
         p.slide__subtitle= subtitle
 
-mixin new-today(img, title, description)
+mixin new-today(img, description, title)
   article.new&attributes(attributes)
     +img(img, title).new__img.new__img_today
     a.new__container.new__container_today(href='#')
       p.new__description.new__description_today= description
       h3.new__title.new__title_today= title
 
-mixin new-recent(img, title, description)
+mixin new-recent(img, description, title)
   article.new&attributes(attributes)
     a(href='#')
       +img(img, title).new__img.new__img_recent
