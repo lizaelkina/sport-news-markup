@@ -2,5 +2,22 @@ section.recent-news
   h2.recent-news__title
     | Recent News
   div.recent-news__container
-    +new-recent('./img/recent-new-1', 'Baku 2023 World Taekwondo Championships', 'Day 5 Highlights')
+    +new-recent('./img/recent-new-1',
+      'Day 5 Highlights',
+      'Baku 2023 World Taekwondo Championships')
     div.recent-news__more
+      ul.recent-news__list
+        li
+          +new-more('./img/recent-new-2',
+            '#Pollar. 87 - 12 July 2023',
+            'Baku 2023 Taekwondo Championships')
+        li
+          +new-more('./img/recent-new-3',
+            '#Goft. Toni - 20 July 2023',
+            'Open Championship Royal Liverpool Golf')
+        li
+          +new-more('./img/recent-new-4',
+            '#Cricket. Toni - 27 July 2023', 'Ireland Tour of England Test 2023')
+      a(href='#').button.recent-news__button
+        span.button__title More
+        +svg('icon-arrow-more').button__svg

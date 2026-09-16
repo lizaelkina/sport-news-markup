@@ -14,12 +14,27 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
   &__more {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 14px 7px 14px 14px;
     border-radius: vars.$block-radius;
     background-color: vars.$secondary;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__button {
+    align-self: center;
+    padding: 7px 12px;
   }
 }
