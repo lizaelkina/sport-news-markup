@@ -1,0 +1,117 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.clubs-ranking {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    @include mixins.section-title;
+    @include mixins.text-overflow(1);
+  }
+
+  &__container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: vars.$block-radius;
+    background-color: vars.$secondary;
+    overflow-x: auto;
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 528px;
+    counter-reset: place;
+  }
+
+  &__table-header {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 25px);
+    align-items: center;
+    column-gap: 18px;
+    margin-bottom: 16px;
+    padding: 0 30px;
+  }
+
+  &__table-title {
+    text-align: center;
+    font-family: vars.$font-accent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: vars.$primary;
+
+    &_club {
+      text-align: start;
+    }
+  }
+
+  &__table-row {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 25px);
+    align-items: center;
+    column-gap: 18px;
+    padding: 7px 30px;
+    border-bottom: .5px solid vars.$button;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__table-club {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      counter-increment: place;
+      content: counter(place);
+      font-family: vars.$font-accent;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 100%;
+      color: vars.$primary;
+    }
+  }
+
+  &__table-emblem {
+    flex-shrink: 0;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__table-name {
+    @include mixins.text-overflow(1);
+
+    font-family: vars.$font-accent;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    color: vars.$primary;
+  }
+
+  &__table-text {
+    text-align: center;
+    font-family: vars.$font-accent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: vars.$primary;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .clubs-ranking__table-header, .clubs-ranking__table-row {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

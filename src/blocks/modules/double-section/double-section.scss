@@ -1,9 +1,22 @@
 .double-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap: 80px 30px;
+}
 
-  &__clubs-ranking {
-    flex: 1;
+@media screen and (max-width: 1085px) {
+  .double-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .double-section {
+    row-gap: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .double-section {
+    row-gap: 40px;
   }
 }

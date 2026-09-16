@@ -1,0 +1,79 @@
+mixin club(svg, name)
+  div.clubs-ranking__table-club
+    +svg(svg).clubs-ranking__table-emblem
+    p.clubs-ranking__table-name= name
+
+section.clubs-ranking
+  h2.clubs-ranking__title
+    | Clubs Ranking
+  div.clubs-ranking__container
+    ul.clubs-ranking__table(aria-label='table')
+      li.clubs-ranking__table-header(aria-label='rowheader')
+        p.clubs-ranking__table-title.clubs-ranking__table-title_club Club
+        p.clubs-ranking__table-title GP
+        p.clubs-ranking__table-title W
+        p.clubs-ranking__table-title D
+        p.clubs-ranking__table-title L
+        p.clubs-ranking__table-title F
+        p.clubs-ranking__table-title A
+        p.clubs-ranking__table-title GD
+
+      li.clubs-ranking__table-row(aria-label='row')
+        +club('icon-mancity', 'Manchester City')
+        p.clubs-ranking__table-text 38
+        p.clubs-ranking__table-text 29
+        p.clubs-ranking__table-text 6
+        p.clubs-ranking__table-text 3
+        p.clubs-ranking__table-text 99
+        p.clubs-ranking__table-text 26
+        p.clubs-ranking__table-text 73
+
+      li.clubs-ranking__table-row(aria-label='row')
+        +club('icon-liverpool', 'Liverpool')
+        p.clubs-ranking__table-text 38
+        p.clubs-ranking__table-text 28
+        p.clubs-ranking__table-text 8
+        p.clubs-ranking__table-text 2
+        p.clubs-ranking__table-text 94
+        p.clubs-ranking__table-text 26
+        p.clubs-ranking__table-text 68
+
+      li.clubs-ranking__table-row(aria-label='row')
+        +club('icon-chelsea', 'Chelsea')
+        p.clubs-ranking__table-text 38
+        p.clubs-ranking__table-text 21
+        p.clubs-ranking__table-text 11
+        p.clubs-ranking__table-text 6
+        p.clubs-ranking__table-text 76
+        p.clubs-ranking__table-text 33
+        p.clubs-ranking__table-text 43
+
+      li.clubs-ranking__table-row(aria-label='row')
+        +club('icon-tottenham', 'Tottenham Hotspur')
+        p.clubs-ranking__table-text 38
+        p.clubs-ranking__table-text 22
+        p.clubs-ranking__table-text 5
+        p.clubs-ranking__table-text 11
+        p.clubs-ranking__table-text 69
+        p.clubs-ranking__table-text 40
+        p.clubs-ranking__table-text 29
+
+      li.clubs-ranking__table-row(aria-label='row')
+        +club('icon-arsenal', 'Arsenal')
+        p.clubs-ranking__table-text 38
+        p.clubs-ranking__table-text 22
+        p.clubs-ranking__table-text 5
+        p.clubs-ranking__table-text 11
+        p.clubs-ranking__table-text 69
+        p.clubs-ranking__table-text 40
+        p.clubs-ranking__table-text 29
+
+      li.clubs-ranking__table-row(aria-label='row')
+        +club('icon-manutd', 'Manchester United')
+        p.clubs-ranking__table-text 38
+        p.clubs-ranking__table-text 22
+        p.clubs-ranking__table-text 5
+        p.clubs-ranking__table-text 11
+        p.clubs-ranking__table-text 69
+        p.clubs-ranking__table-text 40
+        p.clubs-ranking__table-text 29
