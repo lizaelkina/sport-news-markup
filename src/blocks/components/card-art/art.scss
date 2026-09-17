@@ -1,0 +1,104 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.art {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  gap: 28px;
+  border-radius: vars.$block-radius;
+
+  @media (any-hover: hover) {
+    &:hover .art__img {
+      @include mixins.card-hover;
+    }
+  }
+
+  &__img-wrapper {
+    border-radius: vars.$block-radius;
+    overflow: hidden;
+  }
+
+  &__img {
+    @include mixins.img-hover;
+
+    aspect-ratio: 370 / 248;
+    border-radius: vars.$block-radius;
+    background-color: vars.$button;
+  }
+
+  &__label {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 147%;
+    letter-spacing: 0.01em;
+    color: vars.$primary;
+  }
+
+  &__date {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 101%;
+    color: vars.$text-thin;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+  }
+
+  &__title {
+    font-family: vars.$font-accent;
+    font-weight: 500;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 132%;
+    color: vars.$primary;
+  }
+
+  &__subtitle {
+    @include mixins.text-overflow(5);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 124%;
+    color: vars.$text-description;
+  }
+}

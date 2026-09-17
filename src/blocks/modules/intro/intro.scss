@@ -3,7 +3,6 @@
 
 .intro {
   position: relative;
-  height: auto;
   background-image: url("../img/intro-ball.webp");
   background-repeat: no-repeat;
   background-size: 44.5%;
@@ -32,11 +31,11 @@
     flex: 1;
     justify-content: space-between;
     grid-template-columns: 1fr;
-    gap: 131px;
+    gap: clamp(70px, 10cqw, 131px);
   }
 
   &__title {
-    @include mixins.text-overflow(4);
+    @include mixins.text-overflow(6);
 
     z-index: -1;
     width: 100%;
@@ -52,17 +51,17 @@
   }
 
   &__wrapper {
-    justify-self: end;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    place-self: end end;
     width: 100%;
     max-width: 364px;
+    gap: 24px;
     margin-right: 12%;
   }
 
   &__subtitle {
-    @include mixins.text-overflow(4);
+    @include mixins.text-overflow(6);
 
     font-weight: 400;
     font-size: 18px;
@@ -115,7 +114,7 @@
   }
 
   .intro__container {
-    gap: 70px;
+    gap: 80px;
   }
 
   .intro__title {

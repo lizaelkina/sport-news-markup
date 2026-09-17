@@ -1,0 +1,22 @@
+@use "../../../styles/helpers/variables" as vars;
+@use "../../../styles/helpers/mixins";
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    @include mixins.section-title;
+  }
+
+  &__controls {
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .articles__controls {
+    margin-top: 10px;
+  }
+}

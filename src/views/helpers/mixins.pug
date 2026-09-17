@@ -27,18 +27,18 @@ mixin slide(src, label, description, title, subtitle)
       if subtitle
         p.slide__subtitle= subtitle
 
-mixin new-today(img, description, title)
+mixin new-today(src, description, title)
   article.new&attributes(attributes)
     a(href='#').new__wrapper
-      +img(img, title).new__img.new__img_today
+      +img(src, title).new__img.new__img_today
       hgroup.new__container.new__container_today
         p.new__description.new__description_today= description
         h3.new__title.new__title_today= title
 
-mixin new-recent(img, description, title)
+mixin new-recent(src, description, title)
   article.new&attributes(attributes)
     a(href='#').new__wrapper
-      +img(img, title).new__img.new__img_recent
+      +img(src, title).new__img.new__img_recent
       hgroup.new__container.new__container_recent
         p.new__description.new__description_recent= description
         h3.new__title.new__title_recent= title
@@ -59,3 +59,18 @@ mixin new-more(src, description, title)
     a.new-more__container(href='#')
       p.new-more__description= description
       h3.new-more__title= title
+
+mixin art(src, label, photo, author, date, title, subtitle)
+  article.art&attributes(attributes)
+    div.art__img-wrapper
+      +img(src, title).art__img
+    div.label.art_small.art__label
+      p.label__text.label__text_small= label
+    a.art__container(href='#')
+      div.art__author
+        +img(photo, author).art__photo
+        p.art__name= author
+      time(datetime=date).art__date= date
+      hgroup.art__title-wrapper
+        h3.art__title= title
+        p.art__subtitle= subtitle

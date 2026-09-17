@@ -77,7 +77,7 @@
   }
 
   &__title {
-    @include mixins.text-overflow(2);
+    @include mixins.text-overflow(5);
 
     min-height: 40px;
     font-family: vars.$font-accent;

@@ -9,7 +9,6 @@
 
   &__title {
     @include mixins.section-title;
-    @include mixins.text-overflow(1);
   }
 
   &__container {

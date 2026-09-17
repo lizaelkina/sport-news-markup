@@ -8,7 +8,6 @@
 
   &__title {
     @include mixins.section-title;
-    @include mixins.text-overflow(1);
   }
 
   &__list {
@@ -47,8 +46,6 @@
   }
 
   &__name {
-    @include mixins.text-overflow(2);
-
     font-family: vars.$font-accent;
     font-weight: 900;
     font-size: clamp(26px, 3.5vw, 37px);
@@ -68,7 +65,7 @@
   }
 
   &__img-wrapper {
-    height: 100%;
+    flex-grow: 1;
     border-radius: vars.$block-radius;
     overflow: hidden;
   }
@@ -99,6 +96,7 @@
 @media screen and (max-width: 905px) {
   .category__list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
   }
 
   .category__label {
@@ -107,10 +105,6 @@
     &_bottom {
       order: 0;
     }
-  }
-
-  .category__img {
-    max-height: 220px;
   }
 }
 

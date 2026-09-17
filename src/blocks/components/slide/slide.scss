@@ -63,8 +63,6 @@
   }
 
   &__title {
-    @include mixins.text-overflow(4);
-
     width: 100%;
     max-width: 650px;
     font-family: vars.$font-accent;
@@ -76,8 +74,6 @@
   }
 
   &__subtitle {
-    @include mixins.text-overflow(5);
-
     width: 100%;
     max-width: 705px;
     font-weight: 500;

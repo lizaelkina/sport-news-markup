@@ -1,0 +1,62 @@
+section.articles.page__section.page__section_slider
+  h2.articles__title
+    | Sports Article
+  div.swiper.js-swiper-articles
+    div.swiper-wrapper
+      +art('./img/article-1',
+        'Basketball',
+        './img/article-author-1',
+        'Jake Will.',
+        '04 June 2023',
+        '5 Exercises Basketball Players Should Be Using To Develop Strength',
+        'This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.'
+        ).swiper-slide
+
+      +art('./img/article-2',
+        'Basketball',
+        './img/article-author-2',
+        'Foxi.zacon',
+        '03 June 2023',
+        'Golden Knights out to fulfill owner`s quest to win Stanley Cup in 6th year',
+        'The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.'
+      ).swiper-slide
+
+      +art('./img/article-3',
+        'Basketball',
+        './img/article-author-3',
+        'Bong Lozada',
+        '01 June 2023',
+        '‘Outdoor’ Badminton Gets Support From Local Federation',
+        'The Badminton World Federation is developing Air Badminton and the country’s governing body, Philippine Badminton Association.'
+      ).swiper-slide
+
+      +art('./img/article-4',
+        'Basketball',
+        './img/article-author-1',
+        'Jake Will.',
+        '01 June 2023',
+        'Figure Skaters Push Boundaries With Quadruple Jumps',
+        'The International Skating Union supports young talents and develops the sport around the world.'
+      ).swiper-slide
+
+      +art('./img/article-5',
+        'Basketball',
+        './img/article-author-2',
+        'Foxi.zacon',
+        '01 June 2023',
+        'Young Tennis Stars Ready To Fight For Grand Slam Title',
+        'A new generation of tennis players will challenge the champions at the Grand Slam tournament beginning on Saturday.'
+      ).swiper-slide
+
+      +art('./img/article-6',
+        'Basketball',
+        './img/article-author-3',
+        'Bong Lozada',
+        '01 June 2023',
+        '5 Exercises Football Players Should Use To Build Endurance',
+        'Endurance in football is not only about running, but also about proper training.'
+      ).swiper-slide
+
+  div.articles__controls.swiper-controls.swiper-controls_small
+    +button-prev.js-articles-prev
+    +button-next.js-articles-next
