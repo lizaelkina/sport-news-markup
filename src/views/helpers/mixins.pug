@@ -70,7 +70,7 @@ mixin art(src, label, photo, author, date, title, subtitle)
       div.art__author
         +img(photo, author).art__photo
         p.art__name= author
-      time(datetime=date).art__date= date
+      time(datetime='2023-06').art__date= date
       hgroup.art__title-wrapper
         h3.art__title= title
         p.art__subtitle= subtitle
