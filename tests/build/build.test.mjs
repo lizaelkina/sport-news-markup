@@ -237,9 +237,9 @@ test('BEM generator rolls back partial writes and preserves unrelated files', as
 
 test('BEM generator rejects unsafe names and overwrites; linters enforce intended rules', async t => {
   const f = await fixture(t);
-  const folder = await createBlock('components', 'new-card', f.rootDir);
-  assert.deepEqual((await files(folder)).sort(), ['new-card.js', 'new-card.pug', 'new-card.scss']);
-  await assert.rejects(createBlock('components', 'new-card', f.rootDir), {code: 'EEXIST'});
+  const folder = await createBlock('components', 'card-new-card', f.rootDir);
+  assert.deepEqual((await files(folder)).sort(), ['card-new-card.js', 'card-new-card.pug', 'card-new-card.scss']);
+  await assert.rejects(createBlock('components', 'card-new-card', f.rootDir), {code: 'EEXIST'});
   for (const name of ['../escape', 'CON', 'con', 'a/b', 'two words']) await assert.rejects(createBlock('modules', name, f.rootDir));
   const config = path.join(projectRoot, '.stylelintrc');
   const bad = await stylelint.lint({code: '#bad { color: red; }', codeFilename: path.join(projectRoot, 'src/blocks/components/card/card.scss'), configFile: config});

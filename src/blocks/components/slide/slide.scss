@@ -63,7 +63,7 @@
   }
 
   &__title {
-    @include mixins.text-overflow(3);
+    @include mixins.text-overflow(4);
 
     width: 100%;
     max-width: 650px;
