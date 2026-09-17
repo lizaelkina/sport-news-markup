@@ -91,12 +91,20 @@
 
 @media screen and (max-width: 768px) {
   .swiper-controls {
-    gap: 16px;
+    gap: 10px;
+
+    &_small {
+      gap: 16px;
+    }
   }
 
   .swiper-prev, .swiper-next {
     width: 40px;
     height: 30px;
+  }
+
+  .swiper-pagination {
+    column-gap: 0;
   }
 
   .swiper-pagination-bullet {

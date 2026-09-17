@@ -1,25 +1,26 @@
-section.trending.page__section.page__section_slider
-  div.trending__left
-    h2.trending__title
-      | Trending News
-    ul.trending__list
-      li
-        +new-trending('./img/trending-new-2',
-          'Race98 - 03 June 2023',
-          '6-Year-Old Horse Dies at Belmont Park After Race Injury',
-          'NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s').new-trending_first
-      li
-        +new-trending('./img/trending-new-3',
-          'Jony.Ls - 03 June 2023',
-          'Savilia Blunk Embraces Longer Season with World Cup',
-          'Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some')
-      li
-        +new-trending('./img/trending-new-4',
-          'King.F - 03 June 2023',
-          'Ryan Garcia is fighting again, this time on social media',
-          'Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on')
-  div.trending__right
-    +slide('./img/trending-new-1',
-      'Cycling',
-      'Debits - 03 June 2023',
-      'Discover the member benefits of USA cycling!').slide_small
+section.trending.page__section
+  div.trending__container
+    div.trending__left
+      h2.trending__title
+        | Trending News
+      ul.trending__list
+        li
+          +new-trending('./img/trending-new-2',
+            'Race98 - 03 June 2023',
+            '6-Year-Old Horse Dies at Belmont Park After Race Injury',
+            'NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s').new-trending_first
+        li
+          +new-trending('./img/trending-new-3',
+            'Jony.Ls - 03 June 2023',
+            'Savilia Blunk Embraces Longer Season with World Cup',
+            'Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some')
+        li
+          +new-trending('./img/trending-new-4',
+            'King.F - 03 June 2023',
+            'Ryan Garcia is fighting again, this time on social media',
+            'Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on')
+    div.trending__right
+      +slide('./img/trending-new-1',
+        'Cycling',
+        'Debits - 03 June 2023',
+        'Discover the member benefits of USA cycling!').slide_small

@@ -62,7 +62,7 @@
   }
 
   &__subtitle {
-    @include mixins.text-overflow(3);
+    @include mixins.text-overflow(4);
 
     font-weight: 400;
     font-size: 18px;
