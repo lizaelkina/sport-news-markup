@@ -64,7 +64,7 @@ mixin art(src, label, photo, author, date, title, subtitle)
   article.art&attributes(attributes)
     div.art__img-wrapper
       +img(src, title).art__img
-    div.label.art_small.art__label
+    div.label.label_small.art__label
       p.label__text.label__text_small= label
     a.art__container(href='#')
       div.art__author
