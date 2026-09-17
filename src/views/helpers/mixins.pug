@@ -16,6 +16,10 @@ mixin button-next
 mixin link(name, href)
   a.link(href=href)&attributes(attributes)= name
 
+mixin social(svg, name)
+  a.social(href='#' aria-label=name)&attributes(attributes)
+    +svg(svg).social__svg
+
 mixin slide(src, label, description, title, subtitle)
   article.slide&attributes(attributes)
     +img(src, title).slide__img

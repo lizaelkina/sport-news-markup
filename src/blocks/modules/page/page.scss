@@ -32,6 +32,15 @@
       padding-right: 0;
     }
   }
+
+  &__footer {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1202px;
+    margin: 0 auto 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
