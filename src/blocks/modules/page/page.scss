@@ -43,6 +43,22 @@
   }
 }
 
+@media (min-height: 600px) {
+  .page__intro {
+    scroll-margin-top: 200px;
+  }
+
+  .page__section, .page__double {
+    scroll-margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .page__intro, .page__section, .page__double {
+    scroll-margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .page__header {
     margin-bottom: 10px;

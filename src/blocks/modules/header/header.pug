@@ -1,22 +1,22 @@
-header.header.page__header
+header.header.page__header.js-header
   div.header__container
     h1.header__logo
       a(href='#')
         +img('./img/logo', 'Logo Sport News').header__img
     nav.header__nav.header-desktop
       ul.header__list
-        li.header__item
-          +link('Home', '#').link_active
-        li.header__item
-          +link('Category', '#')
-        li.header__item
-          +link('Trending News', '#')
-        li.header__item
-          +link('Recent News', '#')
-        li.header__item
-          +link('Clubs Ranking', '#')
-        li.header__item
-          +link('Sports Article', '#')
+        li.header__item.js-header-anchor.js-header-anchor-active
+          +link('Home', '#intro')
+        li.header__item.js-header-anchor
+          +link('Category', '#category')
+        li.header__item.js-header-anchor
+          +link('Trending News', '#trending')
+        li.header__item.js-header-anchor
+          +link('Recent News', '#recent-news')
+        li.header__item.js-header-anchor
+          +link('Clubs Ranking', '#clubs-ranking')
+        li.header__item.js-header-anchor
+          +link('Sports Article', '#articles')
     button(type='button').button.header__search.header-desktop
       +svg('icon-search').button__svg
       span.button__title Search

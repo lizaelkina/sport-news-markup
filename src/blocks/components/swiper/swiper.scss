@@ -58,6 +58,7 @@
   flex-wrap: wrap;
   position: static;
   gap: 5px clamp(0px, 1.5vw, 20px);
+  z-index: 1;
 }
 
 .swiper-pagination-bullet {
