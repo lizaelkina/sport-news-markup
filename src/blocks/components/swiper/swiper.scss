@@ -26,20 +26,20 @@
   height: 50px;
   border: none;
   padding: 0;
-  transition: transform .5s ease;
   border-radius: 3px;
   background-color: vars.$primary;
   cursor: pointer;
 
   @media (any-hover: hover) {
-    &:hover {
-      transform: scale(1.1);
+    &:hover .swiper-prev__svg, &:hover .swiper-next__svg {
+      transform: scale(1.4);
     }
   }
 
   &__svg {
     width: 24px;
     height: 12px;
+    transition: transform .5s ease;
   }
 }
 

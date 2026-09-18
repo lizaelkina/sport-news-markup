@@ -3,22 +3,23 @@
 // hover
 @mixin link-hover() {
   position: relative;
-  padding-bottom: 1px;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
-    width: 0;
+    width: 100%;
     height: .5px;
-    transition: .5s;
     background-color: vars.$text-thin;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
   }
 
   @media (any-hover: hover) {
     &:hover::after {
-      width: 100%;
+      transform: scaleX(1);
     }
   }
 }

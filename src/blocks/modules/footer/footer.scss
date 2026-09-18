@@ -81,8 +81,10 @@
     background-color: vars.$primary;
     cursor: pointer;
 
-    &:hover .footer__svg {
-      transform: scale(1.3);
+    @media (any-hover: hover) {
+      &:hover .footer__svg {
+        transform: scale(1.3);
+      }
     }
   }
 

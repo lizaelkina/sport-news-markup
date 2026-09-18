@@ -19,8 +19,18 @@
     }
   }
 
+  @media (any-hover: hover) {
+    &:hover .social__svg {
+      transform: rotateY(360deg);
+    }
+  }
+
   &:focus {
     outline: none;
+  }
+
+  &:focus-visible .social__svg {
+    transform: rotateY(360deg);
   }
 
   &__svg {
@@ -55,10 +65,6 @@
 
   &_twitter::before {
     background: #55acee;
-  }
-
-  &:hover .social__svg {
-    transform: rotateY(360deg);
   }
 }
 
