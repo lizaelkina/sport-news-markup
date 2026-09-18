@@ -13,6 +13,23 @@
   border-radius: 4px;
   background-color: vars.$primary;
 
+  @media (any-hover: hover) {
+    &:hover::before {
+      top: 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__svg {
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    transition: transform .5s ease;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -24,7 +41,7 @@
     transition: top .5s ease;
   }
 
-  &:hover::before {
+  &:focus-visible::before {
     top: 0;
   }
 
@@ -42,13 +59,6 @@
 
   &:hover .social__svg {
     transform: rotateY(360deg);
-  }
-
-  &__svg {
-    z-index: 3;
-    width: 28px;
-    height: 28px;
-    transition: transform .5s ease;
   }
 }
 

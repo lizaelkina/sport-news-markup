@@ -1,7 +1,19 @@
 footer.footer.page__footer
-  form.footer__form
-    h2.footer__title
+  form.footer__form.js-form
+    h2.footer__title.js-title
       | Newsletter Subscription
+    h3.footer__title.js-message
+      | Thanks for subscribing
+    div.footer__group
+      input.footer__input(
+        aria-label='enter email'
+        required
+        type='email'
+        name='email'
+        autocomplete='on'
+        placeholder="shovon.khan0099@gmail.com")
+      button(type='submit').footer__submit
+        +svg('icon-arrow-send').footer__svg
   ul.footer__social
     li
       +social('facebook', 'Facebook').social_facebook
