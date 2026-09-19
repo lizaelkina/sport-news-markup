@@ -1,9 +1,16 @@
 footer.footer.page__footer
   form.footer__form.js-form
     h2.footer__title.js-title
-      | Newsletter Subscription
-    h3.footer__title.js-message
-      | Thanks for subscribing
+      span.footer__title-text(
+        aria-hidden='true'
+        data-title='default') Newsletter Subscription
+      span.footer__title-text(
+        aria-hidden='true'
+        data-title='success') Thanks for subscribing
+      span.footer__title-status.js-title-status(
+        aria-atomic='true'
+        aria-live='polite'
+        role='status') Newsletter Subscription
     div.footer__group
       input.footer__input(
         aria-label='enter email'
