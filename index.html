@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Sport News">
+    <meta name="keywords" content="Sport News">
+    <meta name="author" content="Liza Elkina">
+    <title>Sport News</title><link rel="icon" type="image/x-icon" href="img/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.2.0/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.2.0/swiper-bundle.min.js"></script>
+  </head>
+  <body class="root">
+    <div class="page">
+      <header class="header page__header js-header">
+        <div class="header__container">
+          <h1 class="header__logo"><a href="#"><img class="header__img" src="./img/logo.webp" alt="Logo Sport News" loading="lazy"/></a></h1>
+          <nav class="header__nav header-desktop">
+            <ul class="header__list">
+              <li class="header__item js-header-link is-active"><a class="link" href="#intro" aria-current="location">Home</a>
+              </li>
+              <li class="header__item js-header-link"><a class="link" href="#category">Category</a>
+              </li>
+              <li class="header__item js-header-link"><a class="link" href="#trending">Trending News</a>
+              </li>
+              <li class="header__item js-header-link"><a class="link" href="#recent-news">Recent News</a>
+              </li>
+              <li class="header__item js-header-link"><a class="link" href="#clubs-ranking">Clubs Ranking</a>
+              </li>
+              <li class="header__item js-header-link"><a class="link" href="#articles">Sports Article</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="button header__search header-desktop" type="button">
+            <svg class="button__svg" data-svg="icon-search" aria-hidden="true" role="presentation">
+              <use href="./img/sprites/sprite.svg#icon-search"></use>
+            </svg><span class="button__title">Search</span>
+          </button>
+          <div class="header__buttons header-mobile">
+            <button class="button button_icon" type="button" aria-label="Start search" aria-expanded="false">
+              <svg class="button__svg button__svg_icon" data-svg="icon-search" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+            <button class="burger js-menu-open" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span class="burger__line"></span></button>
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <section class="intro page__intro js-section" id="intro"><img class="intro__img" src="./img/intro-player.webp" alt="Basketball player" loading="lazy" aria-hidden="true"/>
+          <div class="intro__left">
+            <div class="intro__container">
+              <h2 class="intro__title">Top<br>scorer to the&nbsp;final match</h2>
+              <div class="intro__wrapper">
+                <p class="intro__subtitle">
+                  The EuroLeague Finals Top Scorer is&nbsp;the
+                  individual award for the player that gained
+                  the highest points in&nbsp;the EuroLeague Finals
+                </p>
+                <button class="button button_secondary intro__button" type="button"><span class="button__title-secondary">Continue reading</span></button>
+              </div>
+            </div>
+            <div class="intro__right">
+              <div class="intro__label">
+                <p class="intro__label-text">Today</p>
+              </div>
+              <ul class="intro__news">
+                <li>
+                  <article class="new"><a class="new__wrapper" href="#"><img class="new__img new__img_today" src="./img/intro-new-1.webp" alt="Ethiopian runners took the top four spots" loading="lazy"/>
+                      <hgroup class="new__container new__container_today">
+                        <p class="new__description new__description_today">Race98 - 03 June 2023</p>
+                        <h3 class="new__title new__title_today">Ethiopian runners took the top four spots</h3>
+                      </hgroup></a></article>
+                </li>
+                <li>
+                  <article class="new"><a class="new__wrapper" href="#"><img class="new__img new__img_today" src="./img/intro-new-2.webp" alt="IndyCar Detroit: Dixon quickest in second practice" loading="lazy"/>
+                      <hgroup class="new__container new__container_today">
+                        <p class="new__description new__description_today">INDYCAR - 03 June 2023</p>
+                        <h3 class="new__title new__title_today">IndyCar Detroit: Dixon quickest in second practice</h3>
+                      </hgroup></a></article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="category page__section js-section" id="category">
+          <h2 class="category__title">Category</h2>
+          <ul class="category__list">
+                    <li>
+                      <figure class="category__card">
+                        <figcaption class="category__label"><a class="category__name" href="#">Football</a></figcaption>
+                        <div class="category__img-wrapper"><img class="category__img" src="./img/category-1.webp" alt="Football" loading="lazy"/>
+                        </div>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure class="category__card">
+                        <figcaption class="category__label category__label_bottom"><a class="category__name" href="#">Basket ball</a></figcaption>
+                        <div class="category__img-wrapper"><img class="category__img" src="./img/category-2.webp" alt="Basket ball" loading="lazy"/>
+                        </div>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure class="category__card">
+                        <figcaption class="category__label"><a class="category__name" href="#">Car sport</a></figcaption>
+                        <div class="category__img-wrapper"><img class="category__img" src="./img/category-3.webp" alt="Car sport" loading="lazy"/>
+                        </div>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure class="category__card">
+                        <figcaption class="category__label category__label_bottom"><a class="category__name" href="#">Table tennis</a></figcaption>
+                        <div class="category__img-wrapper"><img class="category__img" src="./img/category-4.webp" alt="Table tennis" loading="lazy"/>
+                        </div>
+                      </figure>
+                    </li>
+          </ul>
+        </section>
+        <section class="trending page__section js-section" id="trending">
+          <div class="trending__container">
+            <div class="trending__left">
+              <h2 class="trending__title">Trending News</h2>
+              <ul class="trending__list">
+                <li>
+                  <article class="new-trending new-trending_first">
+                    <div class="new-trending__img-wrapper"><img class="new-trending__img" src="./img/trending-new-2.webp" alt="6-Year-Old Horse Dies at Belmont Park After Race Injury" loading="lazy"/>
+                    </div><a class="new-trending__container" href="#">
+                      <p class="new-trending__description">Race98 - 03 June 2023</p>
+                      <h3 class="new-trending__title">6-Year-Old Horse Dies at Belmont Park After Race Injury</h3>
+                      <p class="new-trending__subtitle">NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s</p></a>
+                  </article>
+                </li>
+                <li>
+                  <article class="new-trending">
+                    <div class="new-trending__img-wrapper"><img class="new-trending__img" src="./img/trending-new-3.webp" alt="Savilia Blunk Embraces Longer Season with World Cup" loading="lazy"/>
+                    </div><a class="new-trending__container" href="#">
+                      <p class="new-trending__description">Jony.Ls - 03 June 2023</p>
+                      <h3 class="new-trending__title">Savilia Blunk Embraces Longer Season with World Cup</h3>
+                      <p class="new-trending__subtitle">Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some</p></a>
+                  </article>
+                </li>
+                <li>
+                  <article class="new-trending">
+                    <div class="new-trending__img-wrapper"><img class="new-trending__img" src="./img/trending-new-4.webp" alt="Ryan Garcia is fighting again, this time on social media" loading="lazy"/>
+                    </div><a class="new-trending__container" href="#">
+                      <p class="new-trending__description">King.F - 03 June 2023</p>
+                      <h3 class="new-trending__title">Ryan Garcia is fighting again, this time on social media</h3>
+                      <p class="new-trending__subtitle">Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on</p></a>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <div class="trending__right">
+              <article class="slide slide_small"><img class="slide__img" src="./img/trending-new-1.webp" alt="Discover the member benefits of USA cycling!" loading="lazy"/>
+                <div class="label">
+                  <p class="label__text">Cycling</p>
+                </div><a class="slide__title-wrapper" href="#">
+                  <p class="slide__description">Debits - 03 June 2023</p>
+                  <h3 class="slide__title">Discover the member benefits of USA cycling!</h3></a>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="slider page__section" aria-label="News photo gallery">
+          <div class="slider__container">
+            <div class="swiper js-swiper-slider">
+              <div class="swiper-wrapper">
+                <article class="slide slide_big swiper-slide"><img class="slide__img" src="./img/slide-1.webp" alt="Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms" loading="lazy"/>
+                  <div class="label">
+                    <p class="label__text">Football</p>
+                  </div><a class="slide__title-wrapper" href="#">
+                    <p class="slide__description">Agence France-Presse – 04 June 2023</p>
+                    <h3 class="slide__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                    <p class="slide__subtitle">The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p></a>
+                </article>
+                <article class="slide slide_big swiper-slide"><img class="slide__img" src="./img/slide-2.webp" alt="BOSTON CELTICS CLAIM NBA CHAMPIONSHIP WITH GAME 7 VICTORY" loading="lazy"/>
+                  <div class="label">
+                    <p class="label__text">Basketball</p>
+                  </div><a class="slide__title-wrapper" href="#">
+                    <p class="slide__description">ESPN – 18 June 2023</p>
+                    <h3 class="slide__title">BOSTON CELTICS CLAIM NBA CHAMPIONSHIP WITH GAME 7 VICTORY</h3>
+                    <p class="slide__subtitle">Jayson Tatum`s career - high 51 points led the Celtics to a decisive 112-88 victory over the Philadelphia 76ers in the championship - deciding Game 7</p></a>
+                </article>
+                <article class="slide slide_big swiper-slide"><img class="slide__img" src="./img/slide-3.webp" alt="ALCARAZ DEFENDS WIMBLEDON TITLE IN THRILLING FIVE-SETTER" loading="lazy"/>
+                  <div class="label">
+                    <p class="label__text">Football</p>
+                  </div><a class="slide__title-wrapper" href="#">
+                    <p class="slide__description">The Guardian – 14 July 2023</p>
+                    <h3 class="slide__title">ALCARAZ DEFENDS WIMBLEDON TITLE IN THRILLING FIVE-SETTER</h3>
+                    <p class="slide__subtitle">The Spanish star defeated Novak Djokovic 6-4, 3-6, 6-3, 4-6, 6-3 in an epic final lasting over four hours on Centre Court</p></a>
+                </article>
+                <article class="slide slide_big swiper-slide"><img class="slide__img" src="./img/slide-4.webp" alt="ANTONELLI MAKES HISTORY AT MONACO GRAND PRIX" loading="lazy"/>
+                  <div class="label">
+                    <p class="label__text">Formula 1</p>
+                  </div><a class="slide__title-wrapper" href="#">
+                    <p class="slide__description">Autosport – 31 May 2023</p>
+                    <h3 class="slide__title">ANTONELLI MAKES HISTORY AT MONACO GRAND PRIX</h3>
+                    <p class="slide__subtitle">The young Mercedes driver became the youngest-ever winner of the prestigious Monaco Grand Prix</p></a>
+                </article>
+              </div>
+            </div>
+            <div class="slider__controls swiper-controls">
+              <button class="swiper-prev js-slider-prev" type="button">
+                <svg class="swiper-prev__svg" data-svg="icon-arrow-slide" aria-hidden="true" role="presentation">
+                  <use href="./img/sprites/sprite.svg#icon-arrow-slide"></use>
+                </svg>
+              </button>
+              <div class="swiper-pagination"></div>
+              <button class="swiper-next js-slider-next" type="button">
+                <svg class="swiper-next__svg" data-svg="icon-arrow-slide" aria-hidden="true" role="presentation">
+                  <use href="./img/sprites/sprite.svg#icon-arrow-slide"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="double-section page__section">
+          <section class="recent-news page__double js-section" id="recent-news">
+            <h2 class="recent-news__title">Recent News</h2>
+            <div class="recent-news__container">
+              <div class="recent-news__left">
+                <article class="new"><a class="new__wrapper" href="#"><img class="new__img new__img_recent" src="./img/recent-new-1.webp" alt="Baku 2023 World Taekwondo Championships" loading="lazy"/>
+                    <hgroup class="new__container new__container_recent">
+                      <p class="new__description new__description_recent">Day 5 Highlights</p>
+                      <h3 class="new__title new__title_recent">Baku 2023 World Taekwondo Championships</h3>
+                    </hgroup></a></article>
+              </div>
+              <div class="recent-news__right">
+                <ul class="recent-news__list">
+                  <li>
+                    <article class="new-more">
+                      <div class="new-more__img-wrapper"><img class="new-more__img" src="./img/recent-new-2.webp" alt="Baku 2023 Taekwondo Championships" loading="lazy"/>
+                      </div><a class="new-more__container" href="#">
+                        <p class="new-more__description">#Pollar. 87 - 12 July 2023</p>
+                        <h3 class="new-more__title">Baku 2023 Taekwondo Championships</h3></a>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="new-more">
+                      <div class="new-more__img-wrapper"><img class="new-more__img" src="./img/recent-new-3.webp" alt="Open Championship Royal Liverpool Golf" loading="lazy"/>
+                      </div><a class="new-more__container" href="#">
+                        <p class="new-more__description">#Goft. Toni - 20 July 2023</p>
+                        <h3 class="new-more__title">Open Championship Royal Liverpool Golf</h3></a>
+                    </article>
+                  </li>
+                  <li>
+                    <article class="new-more">
+                      <div class="new-more__img-wrapper"><img class="new-more__img" src="./img/recent-new-4.webp" alt="Ireland Tour of England Test 2023" loading="lazy"/>
+                      </div><a class="new-more__container" href="#">
+                        <p class="new-more__description">#Cricket. Toni - 27 July 2023</p>
+                        <h3 class="new-more__title">Ireland Tour of England Test 2023</h3></a>
+                    </article>
+                  </li>
+                </ul><a class="button recent-news__button" href="#"><span class="button__title">More</span>
+                  <svg class="button__svg" data-svg="icon-arrow-more" aria-hidden="true" role="presentation">
+                    <use href="./img/sprites/sprite.svg#icon-arrow-more"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </section>
+          <section class="clubs-ranking page__double js-section" id="clubs-ranking">
+            <h2 class="clubs-ranking__title">Clubs Ranking</h2>
+            <div class="clubs-ranking__container">
+              <ul class="clubs-ranking__table" aria-label="table">
+                <li class="clubs-ranking__table-header" aria-label="rowheader">
+                  <p class="clubs-ranking__table-title clubs-ranking__table-title_club">Club</p>
+                  <p class="clubs-ranking__table-title">GP</p>
+                  <p class="clubs-ranking__table-title">W</p>
+                  <p class="clubs-ranking__table-title">D</p>
+                  <p class="clubs-ranking__table-title">L</p>
+                  <p class="clubs-ranking__table-title">F</p>
+                  <p class="clubs-ranking__table-title">A</p>
+                  <p class="clubs-ranking__table-title">GD</p>
+                </li>
+                <li class="clubs-ranking__table-row" aria-label="row">
+                            <div class="clubs-ranking__table-club">
+                              <svg class="clubs-ranking__table-emblem" data-svg="icon-mancity" aria-hidden="true" role="presentation">
+                                <use href="./img/sprites/sprite.svg#icon-mancity"></use>
+                              </svg>
+                              <p class="clubs-ranking__table-name">Manchester City</p>
+                            </div>
+                  <p class="clubs-ranking__table-text">38</p>
+                  <p class="clubs-ranking__table-text">29</p>
+                  <p class="clubs-ranking__table-text">6</p>
+                  <p class="clubs-ranking__table-text">3</p>
+                  <p class="clubs-ranking__table-text">99</p>
+                  <p class="clubs-ranking__table-text">26</p>
+                  <p class="clubs-ranking__table-text">73</p>
+                </li>
+                <li class="clubs-ranking__table-row" aria-label="row">
+                            <div class="clubs-ranking__table-club">
+                              <svg class="clubs-ranking__table-emblem" data-svg="icon-liverpool" aria-hidden="true" role="presentation">
+                                <use href="./img/sprites/sprite.svg#icon-liverpool"></use>
+                              </svg>
+                              <p class="clubs-ranking__table-name">Liverpool</p>
+                            </div>
+                  <p class="clubs-ranking__table-text">38</p>
+                  <p class="clubs-ranking__table-text">28</p>
+                  <p class="clubs-ranking__table-text">8</p>
+                  <p class="clubs-ranking__table-text">2</p>
+                  <p class="clubs-ranking__table-text">94</p>
+                  <p class="clubs-ranking__table-text">26</p>
+                  <p class="clubs-ranking__table-text">68</p>
+                </li>
+                <li class="clubs-ranking__table-row" aria-label="row">
+                            <div class="clubs-ranking__table-club">
+                              <svg class="clubs-ranking__table-emblem" data-svg="icon-chelsea" aria-hidden="true" role="presentation">
+                                <use href="./img/sprites/sprite.svg#icon-chelsea"></use>
+                              </svg>
+                              <p class="clubs-ranking__table-name">Chelsea</p>
+                            </div>
+                  <p class="clubs-ranking__table-text">38</p>
+                  <p class="clubs-ranking__table-text">21</p>
+                  <p class="clubs-ranking__table-text">11</p>
+                  <p class="clubs-ranking__table-text">6</p>
+                  <p class="clubs-ranking__table-text">76</p>
+                  <p class="clubs-ranking__table-text">33</p>
+                  <p class="clubs-ranking__table-text">43</p>
+                </li>
+                <li class="clubs-ranking__table-row" aria-label="row">
+                            <div class="clubs-ranking__table-club">
+                              <svg class="clubs-ranking__table-emblem" data-svg="icon-tottenham" aria-hidden="true" role="presentation">
+                                <use href="./img/sprites/sprite.svg#icon-tottenham"></use>
+                              </svg>
+                              <p class="clubs-ranking__table-name">Tottenham Hotspur</p>
+                            </div>
+                  <p class="clubs-ranking__table-text">38</p>
+                  <p class="clubs-ranking__table-text">22</p>
+                  <p class="clubs-ranking__table-text">5</p>
+                  <p class="clubs-ranking__table-text">11</p>
+                  <p class="clubs-ranking__table-text">69</p>
+                  <p class="clubs-ranking__table-text">40</p>
+                  <p class="clubs-ranking__table-text">29</p>
+                </li>
+                <li class="clubs-ranking__table-row" aria-label="row">
+                            <div class="clubs-ranking__table-club">
+                              <svg class="clubs-ranking__table-emblem" data-svg="icon-arsenal" aria-hidden="true" role="presentation">
+                                <use href="./img/sprites/sprite.svg#icon-arsenal"></use>
+                              </svg>
+                              <p class="clubs-ranking__table-name">Arsenal</p>
+                            </div>
+                  <p class="clubs-ranking__table-text">38</p>
+                  <p class="clubs-ranking__table-text">22</p>
+                  <p class="clubs-ranking__table-text">5</p>
+                  <p class="clubs-ranking__table-text">11</p>
+                  <p class="clubs-ranking__table-text">69</p>
+                  <p class="clubs-ranking__table-text">40</p>
+                  <p class="clubs-ranking__table-text">29</p>
+                </li>
+                <li class="clubs-ranking__table-row" aria-label="row">
+                            <div class="clubs-ranking__table-club">
+                              <svg class="clubs-ranking__table-emblem" data-svg="icon-manutd" aria-hidden="true" role="presentation">
+                                <use href="./img/sprites/sprite.svg#icon-manutd"></use>
+                              </svg>
+                              <p class="clubs-ranking__table-name">Manchester United</p>
+                            </div>
+                  <p class="clubs-ranking__table-text">38</p>
+                  <p class="clubs-ranking__table-text">22</p>
+                  <p class="clubs-ranking__table-text">5</p>
+                  <p class="clubs-ranking__table-text">11</p>
+                  <p class="clubs-ranking__table-text">69</p>
+                  <p class="clubs-ranking__table-text">40</p>
+                  <p class="clubs-ranking__table-text">29</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <section class="articles page__section page__section_slider js-section" id="articles">
+          <h2 class="articles__title">Sports Article</h2>
+          <div class="swiper js-swiper-articles">
+            <div class="swiper-wrapper">
+              <article class="art swiper-slide">
+                <div class="art__img-wrapper"><img class="art__img" src="./img/article-1.webp" alt="5 Exercises Basketball Players Should Be Using To Develop Strength" loading="lazy"/>
+                </div>
+                <div class="label label_small art__label">
+                  <p class="label__text label__text_small">Basketball</p>
+                </div><a class="art__container" href="#">
+                  <div class="art__author"><img class="art__photo" src="./img/article-author-1.webp" alt="Jake Will." loading="lazy"/>
+                    <p class="art__name">Jake Will.</p>
+                  </div>
+                  <time class="art__date" datetime="2023-06">04 June 2023</time>
+                  <hgroup class="art__title-wrapper">
+                    <h3 class="art__title">5 Exercises Basketball Players Should Be Using To Develop Strength</h3>
+                    <p class="art__subtitle">This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.</p>
+                  </hgroup></a>
+              </article>
+              <article class="art swiper-slide">
+                <div class="art__img-wrapper"><img class="art__img" src="./img/article-2.webp" alt="Golden Knights out to fulfill owner`s quest to win Stanley Cup in 6th year" loading="lazy"/>
+                </div>
+                <div class="label label_small art__label">
+                  <p class="label__text label__text_small">Hockey</p>
+                </div><a class="art__container" href="#">
+                  <div class="art__author"><img class="art__photo" src="./img/article-author-2.webp" alt="Foxi.zacon" loading="lazy"/>
+                    <p class="art__name">Foxi.zacon</p>
+                  </div>
+                  <time class="art__date" datetime="2023-06">03 June 2023</time>
+                  <hgroup class="art__title-wrapper">
+                    <h3 class="art__title">Golden Knights out to fulfill owner`s quest to win Stanley Cup in 6th year</h3>
+                    <p class="art__subtitle">The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</p>
+                  </hgroup></a>
+              </article>
+              <article class="art swiper-slide">
+                <div class="art__img-wrapper"><img class="art__img" src="./img/article-3.webp" alt="‘Outdoor’ Badminton Gets Support From Local Federation" loading="lazy"/>
+                </div>
+                <div class="label label_small art__label">
+                  <p class="label__text label__text_small">Badminton</p>
+                </div><a class="art__container" href="#">
+                  <div class="art__author"><img class="art__photo" src="./img/article-author-3.webp" alt="Bong Lozada" loading="lazy"/>
+                    <p class="art__name">Bong Lozada</p>
+                  </div>
+                  <time class="art__date" datetime="2023-06">01 June 2023</time>
+                  <hgroup class="art__title-wrapper">
+                    <h3 class="art__title">‘Outdoor’ Badminton Gets Support From Local Federation</h3>
+                    <p class="art__subtitle">The Badminton World Federation is developing Air Badminton and the country’s governing body, Philippine Badminton Association.</p>
+                  </hgroup></a>
+              </article>
+              <article class="art swiper-slide">
+                <div class="art__img-wrapper"><img class="art__img" src="./img/article-4.webp" alt="Figure Skaters Push Boundaries With Quadruple Jumps" loading="lazy"/>
+                </div>
+                <div class="label label_small art__label">
+                  <p class="label__text label__text_small">Figure skating</p>
+                </div><a class="art__container" href="#">
+                  <div class="art__author"><img class="art__photo" src="./img/article-author-1.webp" alt="Jake Will." loading="lazy"/>
+                    <p class="art__name">Jake Will.</p>
+                  </div>
+                  <time class="art__date" datetime="2023-06">01 June 2023</time>
+                  <hgroup class="art__title-wrapper">
+                    <h3 class="art__title">Figure Skaters Push Boundaries With Quadruple Jumps</h3>
+                    <p class="art__subtitle">The International Skating Union supports young talents and develops the sport around the world.</p>
+                  </hgroup></a>
+              </article>
+              <article class="art swiper-slide">
+                <div class="art__img-wrapper"><img class="art__img" src="./img/article-5.webp" alt="Young Tennis Stars Ready To Fight For Grand Slam Title" loading="lazy"/>
+                </div>
+                <div class="label label_small art__label">
+                  <p class="label__text label__text_small">Tennis</p>
+                </div><a class="art__container" href="#">
+                  <div class="art__author"><img class="art__photo" src="./img/article-author-2.webp" alt="Foxi.zacon" loading="lazy"/>
+                    <p class="art__name">Foxi.zacon</p>
+                  </div>
+                  <time class="art__date" datetime="2023-06">01 June 2023</time>
+                  <hgroup class="art__title-wrapper">
+                    <h3 class="art__title">Young Tennis Stars Ready To Fight For Grand Slam Title</h3>
+                    <p class="art__subtitle">A new generation of tennis players will challenge the champions at the Grand Slam tournament beginning on Saturday.</p>
+                  </hgroup></a>
+              </article>
+              <article class="art swiper-slide">
+                <div class="art__img-wrapper"><img class="art__img" src="./img/article-6.webp" alt="5 Exercises Football Players Should Use To Build Endurance" loading="lazy"/>
+                </div>
+                <div class="label label_small art__label">
+                  <p class="label__text label__text_small">Football</p>
+                </div><a class="art__container" href="#">
+                  <div class="art__author"><img class="art__photo" src="./img/article-author-3.webp" alt="Bong Lozada" loading="lazy"/>
+                    <p class="art__name">Bong Lozada</p>
+                  </div>
+                  <time class="art__date" datetime="2023-06">01 June 2023</time>
+                  <hgroup class="art__title-wrapper">
+                    <h3 class="art__title">5 Exercises Football Players Should Use To Build Endurance</h3>
+                    <p class="art__subtitle">Endurance in football is not only about running, but also about proper training.</p>
+                  </hgroup></a>
+              </article>
+            </div>
+          </div>
+          <div class="articles__controls swiper-controls swiper-controls_small">
+            <button class="swiper-prev js-articles-prev" type="button">
+              <svg class="swiper-prev__svg" data-svg="icon-arrow-slide" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#icon-arrow-slide"></use>
+              </svg>
+            </button>
+            <button class="swiper-next js-articles-next" type="button">
+              <svg class="swiper-next__svg" data-svg="icon-arrow-slide" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#icon-arrow-slide"></use>
+              </svg>
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer page__footer js-footer">
+        <form class="footer__form js-newsletter-form">
+          <h2 class="footer__title js-newsletter-title"><span class="footer__title-text" aria-hidden="true" data-title="default">Newsletter Subscription</span><span class="footer__title-text" aria-hidden="true" data-title="success">Thanks for subscribing</span><span class="footer__title-status js-newsletter-status" aria-atomic="true" aria-live="polite">Newsletter Subscription</span></h2>
+          <div class="footer__group">
+            <input class="footer__input" aria-label="enter email" required type="email" name="email" autocomplete="on" placeholder="shovon.khan0099@gmail.com">
+            <button class="footer__submit js-newsletter-submit" type="submit">
+              <svg class="footer__svg" data-svg="icon-arrow-send" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#icon-arrow-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <ul class="footer__social">
+          <li><a class="social social_facebook" href="#" aria-label="Facebook">
+              <svg class="social__svg" data-svg="facebook" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#facebook"></use>
+              </svg></a>
+          </li>
+          <li><a class="social social_instagram" href="#" aria-label="Instagram">
+              <svg class="social__svg" data-svg="instagram" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#instagram"></use>
+              </svg></a>
+          </li>
+          <li><a class="social social_twitter" href="#" aria-label="Twitter">
+              <svg class="social__svg" data-svg="twitter" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#twitter"></use>
+              </svg></a>
+          </li>
+        </ul>
+      </footer>
+      <dialog class="menu js-menu" id="mobile-menu">
+        <nav class="menu__container">
+          <div class="menu__buttons">
+            <button class="button button_icon" type="button" aria-label="Start search" aria-expanded="false">
+              <svg class="button__svg button__svg_icon" data-svg="icon-search" aria-hidden="true" role="presentation">
+                <use href="./img/sprites/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+            <button class="burger js-menu-close" type="button" aria-label="Close menu"><span class="burger__line"></span></button>
+          </div>
+          <ul class="menu__list">
+            <li class="js-menu-link"><a class="link" href="#intro">Home</a>
+            </li>
+            <li class="js-menu-link"><a class="link" href="#category">Category</a>
+            </li>
+            <li class="js-menu-link"><a class="link" href="#trending">Trending News</a>
+            </li>
+            <li class="js-menu-link"><a class="link" href="#recent-news">Recent News</a>
+            </li>
+            <li class="js-menu-link"><a class="link" href="#clubs-ranking">Clubs Ranking</a>
+            </li>
+            <li class="js-menu-link"><a class="link" href="#articles">Sports Article</a>
+            </li>
+          </ul>
+        </nav>
+      </dialog>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
