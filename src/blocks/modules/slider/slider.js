@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 1,
       grabCursor: true,
 
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
 
       navigation: {
         nextEl: '.js-slider-next',
