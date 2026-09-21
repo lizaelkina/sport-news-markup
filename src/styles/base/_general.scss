@@ -2,6 +2,8 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: vars.$primary vars.$secondary;
 }
 
 *, ::before, ::after {
