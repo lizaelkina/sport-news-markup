@@ -81,6 +81,7 @@
     line-height: 133%;
     letter-spacing: 0.01em;
     color: vars.$primary;
+    touch-action: none;
 
     &::placeholder {
       font-weight: 400;
@@ -236,8 +237,8 @@
 
 @media screen and (max-width: 540px) {
   .footer__input {
-    max-width: 270px;
-    padding: 4px;
+    padding-left: 4px;
+    padding-right: 0;
   }
 
   .footer__submit {
