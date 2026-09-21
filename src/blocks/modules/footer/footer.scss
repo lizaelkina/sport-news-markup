@@ -71,7 +71,7 @@
 
   &__input {
     width: 100%;
-    max-width: 100%;
+    max-width: 441px;
     border: 1px solid vars.$primary;
     padding: 0 24px;
     border-radius: vars.$block-radius 0 0 vars.$block-radius;
@@ -93,7 +93,6 @@
 
     &:focus, &:focus-visible {
       border-radius: vars.$block-radius;
-      outline: 2px solid vars.$primary;
     }
 
     &:-webkit-autofill, &:-webkit-autofill:focus, &:-webkit-autofill:active {
@@ -237,8 +236,8 @@
 
 @media screen and (max-width: 540px) {
   .footer__input {
-    padding-left: 2px;
-    padding-right: 0;
+    max-width: 270px;
+    padding: 4px;
   }
 
   .footer__submit {
