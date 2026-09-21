@@ -12,6 +12,20 @@
 
   let sectionObserver = null;
 
+  let isScrolledLast = false;
+
+  window.addEventListener('scroll', () => {
+    const issScrolledNow = window.scrollY > 50;
+    if (issScrolledNow !== isScrolledLast) {
+      if (issScrolledNow) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      isScrolledLast = issScrolledNow;
+    }
+  });
+
   navItems.forEach((navItem) => {
     const link = navItem.querySelector('a[href^="#"]');
     const section = link?.hash

@@ -6,6 +6,13 @@
     z-index: 5;
     top: 0;
     left: 0;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+
+    &.scrolled {
+      background-color: rgb(from vars.$accent r g b / 90%);
+      box-shadow: 0 25px 20px -20px rgb(0 0 0 / 45%);
+    }
   }
 }
 
