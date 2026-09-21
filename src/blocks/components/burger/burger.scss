@@ -2,6 +2,9 @@
 @use "../../../styles/helpers/mixins";
 
 .burger {
+  --burger-line-offset: 8px;
+  --burger-duration: .2s;
+
   display: block;
   position: relative;
   width: 28px;
@@ -9,21 +12,12 @@
   border: none;
   padding: 0;
   background-color: transparent;
+  cursor: pointer;
 
-  &.is-active .burger__line {
-    background: none;
-  }
-
-  &.is-active .burger__line::before {
-    top: 0;
-    transform: rotate(45deg);
-    transition-delay: 0s, .3s;
-  }
-
-  &.is-active .burger__line::after {
-    bottom: 0;
-    transform: rotate(-45deg);
-    transition-delay: 0s, .3s;
+  @media (any-hover: hover) {
+    &:hover .burger__line, &:hover .burger__line::before, &:hover .burger__line::after {
+      background-color: vars.$button;
+    }
   }
 
   &__line {
@@ -34,6 +28,7 @@
     height: 2px;
     border-radius: 6px;
     background: vars.$primary;
+    transition: background-color var(--burger-duration);
 
     &::before, &::after {
       content: "";
@@ -44,18 +39,34 @@
       height: 100%;
       border-radius: 6px;
       background: vars.$primary;
-      transition-duration: .3s, .3s;
-      transition-delay: .3s, 0s;
+      transition: translate var(--burger-duration) var(--burger-duration), rotate var(--burger-duration) 0s;
     }
 
     &::before {
-      top: -8px;
-      transition-property: top, transform;
+      translate: 0 calc(-1 * var(--burger-line-offset));
+      rotate: 0deg;
     }
 
     &::after {
-      bottom: -8px;
-      transition-property: bottom, transform;
+      translate: 0 var(--burger-line-offset);
+      rotate: 0deg;
     }
+  }
+
+  &.is-active .burger__line {
+    background-color: transparent;
+
+    &::before, &::after {
+      translate: 0 0;
+      transition: translate var(--burger-duration) 0s, rotate var(--burger-duration) var(--burger-duration);
+    }
+  }
+
+  &.is-active .burger__line::before {
+    rotate: 45deg;
+  }
+
+  &.is-active .burger__line::after {
+    rotate: -45deg;
   }
 }
