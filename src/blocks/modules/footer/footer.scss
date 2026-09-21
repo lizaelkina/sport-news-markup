@@ -77,15 +77,14 @@
     border-radius: vars.$block-radius 0 0 vars.$block-radius;
     background-color: vars.$secondary;
     font-weight: 400;
-    font-size: clamp(14px, 3vw, 21px);
+    font-size: clamp(16px, 3vw, 21px);
     line-height: 133%;
     letter-spacing: 0.01em;
     color: vars.$primary;
-    touch-action: manipulation;
 
     &::placeholder {
       font-weight: 400;
-      font-size: clamp(16px, 3vw, 21px);
+      font-size: clamp(14px, 3vw, 21px);
       line-height: 133%;
       letter-spacing: 0.01em;
       color: vars.$text-placeholder;
