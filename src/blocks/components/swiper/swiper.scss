@@ -75,9 +75,9 @@
   letter-spacing: 0.01em;
   color: vars.$primary;
   opacity: .6;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   background-color: transparent;
-  transition: border-color 0s linear 300ms;
+  transition: border-color 0s ease 400ms;
 
   @media (any-hover: hover) {
     &:hover {
