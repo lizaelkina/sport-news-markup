@@ -5,11 +5,11 @@
   top: 0;
   width: 400px;
   height: 100dvh;
+  max-height: 100vh;
+  margin: 0 0 0 auto;
   border: none;
   padding: 0;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: auto;
+  background-color: vars.$secondary;
   box-shadow: -5px 0 25px rgb(0 0 0 / 15%);
 
   &[open] {
