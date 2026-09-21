@@ -1,6 +1,6 @@
-mixin club(svg, name)
+mixin club(img, name)
   div.clubs-ranking__table-club
-    +svg(svg).clubs-ranking__table-emblem
+    +img(img, name).clubs-ranking__table-emblem
     p.clubs-ranking__table-name= name
 
 section#clubs-ranking.clubs-ranking.page__double.js-section
@@ -19,7 +19,7 @@ section#clubs-ranking.clubs-ranking.page__double.js-section
         p.clubs-ranking__table-title GD
 
       li.clubs-ranking__table-row(aria-label='row')
-        +club('icon-mancity', 'Manchester City')
+        +club('./img/club-mancity', 'Manchester City')
         p.clubs-ranking__table-text 38
         p.clubs-ranking__table-text 29
         p.clubs-ranking__table-text 6
@@ -29,7 +29,7 @@ section#clubs-ranking.clubs-ranking.page__double.js-section
         p.clubs-ranking__table-text 73
 
       li.clubs-ranking__table-row(aria-label='row')
-        +club('icon-liverpool', 'Liverpool')
+        +club('./img/club-liverpool', 'Liverpool')
         p.clubs-ranking__table-text 38
         p.clubs-ranking__table-text 28
         p.clubs-ranking__table-text 8
@@ -39,7 +39,7 @@ section#clubs-ranking.clubs-ranking.page__double.js-section
         p.clubs-ranking__table-text 68
 
       li.clubs-ranking__table-row(aria-label='row')
-        +club('icon-chelsea', 'Chelsea')
+        +club('./img/club-chelsea', 'Chelsea')
         p.clubs-ranking__table-text 38
         p.clubs-ranking__table-text 21
         p.clubs-ranking__table-text 11
@@ -49,7 +49,7 @@ section#clubs-ranking.clubs-ranking.page__double.js-section
         p.clubs-ranking__table-text 43
 
       li.clubs-ranking__table-row(aria-label='row')
-        +club('icon-tottenham', 'Tottenham Hotspur')
+        +club('./img/club-tottenham', 'Tottenham Hotspur')
         p.clubs-ranking__table-text 38
         p.clubs-ranking__table-text 22
         p.clubs-ranking__table-text 5
@@ -59,7 +59,7 @@ section#clubs-ranking.clubs-ranking.page__double.js-section
         p.clubs-ranking__table-text 29
 
       li.clubs-ranking__table-row(aria-label='row')
-        +club('icon-arsenal', 'Arsenal')
+        +club('./img/club-arsenal', 'Arsenal')
         p.clubs-ranking__table-text 38
         p.clubs-ranking__table-text 22
         p.clubs-ranking__table-text 5
@@ -69,7 +69,7 @@ section#clubs-ranking.clubs-ranking.page__double.js-section
         p.clubs-ranking__table-text 29
 
       li.clubs-ranking__table-row(aria-label='row')
-        +club('icon-manutd', 'Manchester United')
+        +club('./img/club-manutd', 'Manchester United')
         p.clubs-ranking__table-text 38
         p.clubs-ranking__table-text 22
         p.clubs-ranking__table-text 5
