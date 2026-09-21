@@ -75,8 +75,9 @@
   letter-spacing: 0.01em;
   color: vars.$primary;
   opacity: .6;
+  border: 2px solid transparent;
   background-color: transparent;
-  transition: opacity .5s ease;
+  transition: border-color 0s linear 300ms;
 
   @media (any-hover: hover) {
     &:hover {
@@ -89,7 +90,9 @@
   font-weight: 700;
   color: vars.$secondary;
   opacity: 1;
+  border-color: vars.$primary;
   background-color: vars.$primary;
+  transition: none;
 }
 
 @media screen and (max-width: 768px) {
