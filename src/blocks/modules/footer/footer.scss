@@ -81,7 +81,7 @@
     line-height: 133%;
     letter-spacing: 0.01em;
     color: vars.$primary;
-    touch-action: none;
+    touch-action: manipulation;
 
     &::placeholder {
       font-weight: 400;
