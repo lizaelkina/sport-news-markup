@@ -71,6 +71,7 @@
 
   &__input {
     width: 100%;
+    max-width: 100%;
     border: 1px solid vars.$primary;
     padding: 0 24px;
     border-radius: vars.$block-radius 0 0 vars.$block-radius;
