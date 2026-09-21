@@ -84,11 +84,16 @@
 
     &::placeholder {
       font-weight: 400;
-      font-size: clamp(14px, 3vw, 21px);
+      font-size: clamp(16px, 3vw, 21px);
       line-height: 133%;
       letter-spacing: 0.01em;
       color: vars.$text-placeholder;
       background-color: transparent;
+    }
+
+    &:focus, &:focus-visible {
+      border-radius: vars.$block-radius;
+      outline: 2px solid vars.$primary;
     }
 
     &:-webkit-autofill, &:-webkit-autofill:focus, &:-webkit-autofill:active {
