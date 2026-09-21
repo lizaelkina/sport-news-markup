@@ -5,17 +5,17 @@ header.header.page__header.js-header
         +img('./img/logo', 'Logo Sport News').header__img
     nav.header__nav.header-desktop
       ul.header__list
-        li.header__item.js-header-anchor.js-header-anchor-active
-          +link('Home', '#intro')
-        li.header__item.js-header-anchor
+        li.header__item.js-header-link.is-active
+          +link('Home', '#intro')(aria-current='location')
+        li.header__item.js-header-link
           +link('Category', '#category')
-        li.header__item.js-header-anchor
+        li.header__item.js-header-link
           +link('Trending News', '#trending')
-        li.header__item.js-header-anchor
+        li.header__item.js-header-link
           +link('Recent News', '#recent-news')
-        li.header__item.js-header-anchor
+        li.header__item.js-header-link
           +link('Clubs Ranking', '#clubs-ranking')
-        li.header__item.js-header-anchor
+        li.header__item.js-header-link
           +link('Sports Article', '#articles')
     button(type='button').button.header__search.header-desktop
       +svg('icon-search').button__svg
@@ -24,5 +24,9 @@ header.header.page__header.js-header
     div.header__buttons.header-mobile
       button(type='button' aria-label='Start search' aria-expanded='false').button.button_icon
         +svg('icon-search').button__svg.button__svg_icon
-      button(type='button' aria-label='Open menu' aria-expanded='false').burger
+      button(
+        type='button'
+        aria-label='Open menu'
+        aria-controls='mobile-menu'
+        aria-expanded='false').burger.js-menu-open
         span.burger__line

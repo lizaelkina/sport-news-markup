@@ -1,0 +1,20 @@
+dialog#mobile-menu.menu.js-menu
+  nav.menu__container
+    div.menu__buttons
+      button(type='button' aria-label='Start search' aria-expanded='false').button.button_icon
+        +svg('icon-search').button__svg.button__svg_icon
+      button(type='button' aria-label='Close menu').burger.js-menu-close
+        span.burger__line
+    ul.menu__list
+      li.js-menu-link
+        +link('Home', '#intro')
+      li.js-menu-link
+        +link('Category', '#category')
+      li.js-menu-link
+        +link('Trending News', '#trending')
+      li.js-menu-link
+        +link('Recent News', '#recent-news')
+      li.js-menu-link
+        +link('Clubs Ranking', '#clubs-ranking')
+      li.js-menu-link
+        +link('Sports Article', '#articles')

@@ -1,45 +1,80 @@
-const form = document.querySelector('.js-form');
-const title = form?.querySelector('.js-title');
-const status = form?.querySelector('.js-title-status');
-const submit = form?.querySelector('.js-submit');
-const defaultTitle = form?.querySelector('[data-title="default"]')?.textContent;
-const successTitle = form?.querySelector('[data-title="success"]')?.textContent;
-const SUCCESS_DURATION = 2000;
-let busy = false;
+(() => {
+  const footer = document.querySelector('.js-footer');
 
-function wait(duration) {
-  return new Promise(resolve => window.setTimeout(resolve, duration));
-}
+  if (!footer) return;
 
-function setState(state) {
-  title.dataset.state = state;
-  status.textContent = state === 'success' ? successTitle : defaultTitle;
-}
+  const newsletterForm = footer.querySelector('.js-newsletter-form');
+  const titleContainer = footer.querySelector('.js-newsletter-title');
+  const liveStatus = footer.querySelector('.js-newsletter-status');
+  const submitButton = footer.querySelector('.js-newsletter-submit');
+  const defaultTitleText = titleContainer
+    ?.querySelector('[data-title="default"]')
+    ?.textContent;
+  const successTitleText = titleContainer
+    ?.querySelector('[data-title="success"]')
+    ?.textContent;
 
-async function changeState(state) {
-  title.dataset.state = state === 'success' ? 'to-success' : 'to-default';
-  const nextTitle = form.querySelector(`[data-title="${state}"]`);
-  await Promise.all(nextTitle.getAnimations().map(animation => animation.finished));
-  setState(state);
-}
+  if (
+    !newsletterForm ||
+    !titleContainer ||
+    !liveStatus ||
+    !submitButton ||
+    !defaultTitleText ||
+    !successTitleText
+  ) {
+    return;
+  }
 
-async function sendRequest(event) {
-  event.preventDefault();
-  if (busy) return;
+  const SUCCESS_MESSAGE_DURATION_MS = 2000;
 
-  busy = true;
-  submit.disabled = true;
-  form.reset();
+  let isTransitioning = false;
 
-  await changeState('success');
-  await wait(SUCCESS_DURATION);
-  await changeState('default');
+  function delay(duration) {
+    return new Promise(resolve => window.setTimeout(resolve, duration));
+  }
 
-  submit.disabled = false;
-  busy = false;
-}
+  function applyTitleState(state) {
+    titleContainer.dataset.state = state;
+    liveStatus.textContent = state === 'success'
+      ? successTitleText
+      : defaultTitleText;
+  }
 
-if (form && title && status && submit && defaultTitle && successTitle) {
-  title.dataset.state = 'default';
-  form.addEventListener('submit', sendRequest);
-}
+  async function transitionTitleTo(state) {
+    titleContainer.dataset.state = state === 'success'
+      ? 'to-success'
+      : 'to-default';
+
+    const nextTitle = titleContainer.querySelector(`[data-title="${state}"]`);
+
+    if (nextTitle) {
+      await Promise.allSettled(
+        nextTitle.getAnimations().map(animation => animation.finished)
+      );
+    }
+
+    applyTitleState(state);
+  }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    if (isTransitioning) return;
+
+    isTransitioning = true;
+    submitButton.disabled = true;
+
+    try {
+      newsletterForm.reset();
+      await transitionTitleTo('success');
+      await delay(SUCCESS_MESSAGE_DURATION_MS);
+      await transitionTitleTo('default');
+    } finally {
+      submitButton.disabled = false;
+      isTransitioning = false;
+    }
+  }
+
+  applyTitleState('default');
+  newsletterForm.addEventListener('submit', handleSubmit);
+})();

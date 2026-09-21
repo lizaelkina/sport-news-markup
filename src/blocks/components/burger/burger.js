@@ -1,5 +1,6 @@
-const burger = document.querySelector('.burger');
+export function setMenuBurgersState(openButton, closeButton, isOpen) {
+  openButton.classList.toggle('is-active', isOpen);
+  closeButton.classList.toggle('is-active', isOpen);
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('is-active');
-});
+  openButton.setAttribute('aria-expanded', String(isOpen));
+}

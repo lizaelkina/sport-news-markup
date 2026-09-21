@@ -18,3 +18,7 @@
   background-color: vars.$primary;
   border-radius: 5px;
 }
+
+.root:has(dialog[open]) {
+  overflow: hidden;
+}

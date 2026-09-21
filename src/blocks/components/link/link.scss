@@ -11,7 +11,7 @@
   color: vars.$text-thin;
 }
 
-.js-header-anchor-active > .link {
+.js-header-link.is-active > .link, .js-menu-link.is-active > .link {
   font-weight: 700;
   color: vars.$primary;
 

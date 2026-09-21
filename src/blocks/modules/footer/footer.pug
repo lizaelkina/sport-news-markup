@@ -1,13 +1,13 @@
-footer.footer.page__footer
-  form.footer__form.js-form
-    h2.footer__title.js-title
+footer.footer.page__footer.js-footer
+  form.footer__form.js-newsletter-form
+    h2.footer__title.js-newsletter-title
       span.footer__title-text(
         aria-hidden='true'
         data-title='default') Newsletter Subscription
       span.footer__title-text(
         aria-hidden='true'
         data-title='success') Thanks for subscribing
-      span.footer__title-status.js-title-status(
+      span.footer__title-status.js-newsletter-status(
         aria-atomic='true'
         aria-live='polite') Newsletter Subscription
     div.footer__group
@@ -18,7 +18,7 @@ footer.footer.page__footer
         name='email'
         autocomplete='on'
         placeholder="shovon.khan0099@gmail.com")
-      button(type='submit').footer__submit.js-submit
+      button(type='submit').footer__submit.js-newsletter-submit
         +svg('icon-arrow-send').footer__svg
   ul.footer__social
     li

@@ -36,6 +36,12 @@
     padding: 2px;
     border-radius: 0;
     background-color: transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
 
   &__svg {
@@ -47,6 +53,13 @@
       width: 24px;
       height: 24px;
       fill: vars.$primary;
+      transition: fill .5s ease;
+
+      @media (any-hover: hover) {
+        &:hover {
+          fill: vars.$button;
+        }
+      }
     }
   }
 
