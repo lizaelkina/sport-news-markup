@@ -53,9 +53,9 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-height: 600px) {
   .page__intro, .page__section, .page__double {
-    scroll-margin-top: 0;
+    scroll-margin-top: 75px;
   }
 }
 
