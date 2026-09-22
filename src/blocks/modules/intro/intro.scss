@@ -127,10 +127,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .intro {
-    background-size: 36%;
-  }
-
   .intro__img {
     display: none;
   }
@@ -163,6 +159,11 @@
 }
 
 @media screen and (max-width: 626px) {
+  .intro {
+    background-size: 60%;
+    background-position: right top;
+  }
+
   .intro__title {
     margin-left: 0;
   }
