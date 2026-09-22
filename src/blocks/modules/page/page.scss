@@ -27,10 +27,6 @@
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
-
-    &_slider {
-      padding-right: 0;
-    }
   }
 
   &__footer {
@@ -50,6 +46,12 @@
 
   .page__section, .page__double {
     scroll-margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .page__section_slider {
+    padding-right: 0;
   }
 }
 
