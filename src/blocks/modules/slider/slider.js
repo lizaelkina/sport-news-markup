@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        onlyInViewport: true,
+        pageUpDown: false,
       },
 
       a11y: {

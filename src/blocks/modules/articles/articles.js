@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.js-swiper-articles',
     {
       direction: 'horizontal',
+      loop: true,
       slidesPerView: 3,
       grabCursor: true,
       spaceBetween: 30,
@@ -41,7 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        onlyInViewport: true,
+        pageUpDown: false,
       },
 
       a11y: {
