@@ -52,16 +52,6 @@
     }
   }
 
-  &__title-status {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    margin: -1px;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-
   &__group {
     display: flex;
     position: relative;

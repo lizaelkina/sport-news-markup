@@ -30,3 +30,15 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
