@@ -72,6 +72,10 @@
     }
   }
 
+  &__source {
+    @include mixins.source-hover;
+  }
+
   &__title {
     @include mixins.text-overflow(5);
 

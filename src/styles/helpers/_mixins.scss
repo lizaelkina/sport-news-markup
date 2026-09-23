@@ -33,6 +33,16 @@
   transition: transform .5s ease, filter .5s ease;
 }
 
+@mixin source-hover {
+  transition: color .5s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: vars.$primary;
+    }
+  }
+}
+
 // absolute position center
 @mixin position-center {
   position: absolute;

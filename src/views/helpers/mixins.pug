@@ -22,7 +22,7 @@ mixin link(name, href)
   a.link(href=href)&attributes(attributes)= name
 
 mixin social(svg, name)
-  a.social(href='#' aria-label=name)&attributes(attributes)
+  a(href='#' aria-label=name).social&attributes(attributes)
     +svg(svg).social__svg
 
 mixin new-today(data)
@@ -30,7 +30,7 @@ mixin new-today(data)
     +img(data.img, '')(loading='eager').new__img.new__img_today
     div.new__container.new__container_today
       div.new__description.new__description_today
-        a(href='#')= data.source
+        a(href='#').new__source= data.source
         +date(data.date)
       h3
         a(href='#').new__title.new__title_today= data.title
@@ -58,20 +58,23 @@ mixin slide(data)
         a(href='#').slide__title= data.title
       p.slide__subtitle= data.subtitle
 
-mixin new-trending(src, description, title, subtitle)
+mixin new-trending(data)
   article.new-trending&attributes(attributes)
     div.new-trending__img-wrapper
-      +img(src, title).new-trending__img
-    a.new-trending__container(href='#')
-      p.new-trending__description= description
-      h3.new-trending__title= title
-      p.new-trending__subtitle= subtitle
+      +img(data.img, '').new-trending__img
+    div.new-trending__container
+      div.new-trending__description
+        a(href='#').new-trending__source= data.source
+        +date(data.date)
+      h3
+        a(href='#').new-trending__title= data.title
+      p.new-trending__subtitle= data.subtitle
 
 mixin new-more(src, description, title)
   article.new-more&attributes(attributes)
     div.new-more__img-wrapper
       +img(src, title).new-more__img
-    a.new-more__container(href='#')
+    a(href='#').new-more__container
       p.new-more__description= description
       h3.new-more__title= title
 
@@ -81,7 +84,7 @@ mixin art(src, label, photo, author, date, title, subtitle)
       +img(src, title).art__img
     div.label.label_small.art__label
       span.label__text.label__text_small= label
-    a.art__container(href='#')
+    a(href='#').art__container
       div.art__author
         +img(photo, author).art__photo
         span.art__name= author

@@ -52,13 +52,6 @@
       padding-top: 0;
       border-top: 1px solid vars.$button;
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
   }
 
   &__description {
@@ -68,6 +61,10 @@
     font-size: 10px;
     line-height: 110%;
     color: vars.$text-thin;
+  }
+
+  &__source {
+    @include mixins.source-hover;
   }
 
   &__title {

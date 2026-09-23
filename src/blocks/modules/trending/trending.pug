@@ -5,20 +5,29 @@ section#trending.trending.page__section.js-section
         | Trending News
       ul.trending__list
         li
-          +new-trending('./img/trending-new-2',
-            'Race98 - 03 June 2023',
-            '6-Year-Old Horse Dies at Belmont Park After Race Injury',
-            'NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s').new-trending_first
+          +new-trending({
+            img: './img/trending-new-2',
+            source: 'Race98',
+            date: '2023-06-03',
+            title: '6-Year-Old Horse Dies at Belmont Park After Race Injury',
+            subtitle: 'NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s',
+          }).new-trending_first
         li
-          +new-trending('./img/trending-new-3',
-            'Jony.Ls - 03 June 2023',
-            'Savilia Blunk Embraces Longer Season with World Cup',
-            'Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some')
+          +new-trending({
+            img: './img/trending-new-3',
+            source: 'Jony.Ls',
+            date: '2023-06-03',
+            title: 'Savilia Blunk Embraces Longer Season with World Cup',
+            subtitle: 'Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some',
+          })
         li
-          +new-trending('./img/trending-new-4',
-            'King.F - 03 June 2023',
-            'Ryan Garcia is fighting again, this time on social media',
-            'Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on')
+          +new-trending({
+            img: './img/trending-new-4',
+            source: 'King.F',
+            date: '2023-06-03',
+            title: 'Ryan Garcia is fighting again, this time on social media',
+            subtitle: 'Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on',
+          })
     div.trending__right
       +slide({
         img: './img/trending-new-1',
