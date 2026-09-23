@@ -70,13 +70,16 @@ mixin new-trending(data)
         a(href='#').new-trending__title= data.title
       p.new-trending__subtitle= data.subtitle
 
-mixin new-more(src, description, title)
+mixin new-more(data)
   article.new-more&attributes(attributes)
     div.new-more__img-wrapper
-      +img(src, title).new-more__img
-    a(href='#').new-more__container
-      p.new-more__description= description
-      h3.new-more__title= title
+      +img(data.img, '').new-more__img
+    div.new-more__container
+      div.new-more__description
+        span= data.label
+        +date(data.date)
+      h3
+        a(href='#').new-more__title= data.title
 
 mixin art(src, label, photo, author, date, title, subtitle)
   article.art&attributes(attributes)

@@ -12,16 +12,26 @@ section#recent-news.recent-news.page__double.js-section
     div.recent-news__right
       ul.recent-news__list
         li
-          +new-more('./img/recent-new-2',
-            '#Pollar. 87 - 12 July 2023',
-            'Baku 2023 Taekwondo Championships')
+          +new-more({
+            img: './img/recent-new-2',
+            label: '#Pollar. 87',
+            date: '2023-07-12',
+            title: 'Baku 2023 Taekwondo Championships',
+          })
         li
-          +new-more('./img/recent-new-3',
-            '#Goft. Toni - 20 July 2023',
-            'Open Championship Royal Liverpool Golf')
+          +new-more({
+            img: './img/recent-new-3',
+            label: '#Goft. Toni',
+            date: '2023-07-20',
+            title: 'Open Championship Royal Liverpool Golf',
+          })
         li
-          +new-more('./img/recent-new-4',
-            '#Cricket. Toni - 27 July 2023', 'Ireland Tour of England Test 2023')
+          +new-more({
+            img: './img/recent-new-4',
+            label: '#Cricket. Toni',
+            date: '2023-07-27',
+            title: 'Ireland Tour of England Test 2023',
+          })
       a(href='#').button.recent-news__button
         span.button__title More
         +svg('icon-arrow-more').button__svg

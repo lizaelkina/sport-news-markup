@@ -35,13 +35,6 @@
     flex: 2.6;
     flex-direction: column;
     gap: 4px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
   }
 
   &__description {
@@ -61,5 +54,12 @@
     font-size: 16px;
     line-height: 124%;
     color: vars.$primary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
   }
 }
