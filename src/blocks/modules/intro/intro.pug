@@ -1,5 +1,5 @@
 section#intro.intro.page__intro.js-section
-  +img('./img/intro-player', 'Basketball player')(aria-hidden='true').intro__img
+  +img('./img/intro-player', 'Basketball player')(loading='eager' fetchpriority='high').intro__img
   div.intro__left
     div.intro__container
       h2.intro__title
@@ -9,7 +9,7 @@ section#intro.intro.page__intro.js-section
           | The EuroLeague Finals Top Scorer is&nbsp;the
           | individual award for the player that gained
           | the highest points in&nbsp;the EuroLeague Finals
-        button(type='button').button.button_secondary.intro__button
+        a(href='#').button.button_secondary.intro__button
           span.button__title-secondary
             | Continue reading
     div.intro__right

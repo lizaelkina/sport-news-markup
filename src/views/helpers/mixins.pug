@@ -1,5 +1,6 @@
 mixin img(src, alt)
-  img(src=src + '.webp', alt=alt, loading='lazy')&attributes(attributes)
+  - attributes.loading = attributes.loading || 'lazy'
+  img(src=src + '.webp', alt=alt)&attributes(attributes)
 
 mixin svg(name)
   svg(data-svg=name aria-hidden='true' role='presentation')&attributes(attributes)
@@ -34,7 +35,7 @@ mixin slide(src, label, description, title, subtitle)
 mixin new-today(src, description, title)
   article.new&attributes(attributes)
     a(href='#').new__wrapper
-      +img(src, title).new__img.new__img_today
+      +img(src, title)(loading='eager').new__img.new__img_today
       hgroup.new__container.new__container_today
         p.new__description.new__description_today= description
         h3.new__title.new__title_today= title
