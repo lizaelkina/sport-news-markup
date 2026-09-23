@@ -1,10 +1,9 @@
 mixin category-card(src, title)
-  li
-    figure.category__card
-      figcaption.category__label&attributes(attributes)
-        a.category__name(href='#')= title
-      div.category__img-wrapper
-        +img(src, title).category__img
+  li.category__card
+    h3.category__label&attributes(attributes)
+      a(href='#').category__name= title
+    div.category__img-wrapper
+      +img(src, title).category__img
 
 section#category.category.page__section.js-section
   h2.category__title
