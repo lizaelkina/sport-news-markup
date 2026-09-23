@@ -15,10 +15,6 @@
     }
   }
 
-  &__wrapper {
-    height: 100%;
-  }
-
   &__img {
     @include mixins.img-hover;
 
@@ -69,10 +65,18 @@
 
     &_today {
       color: vars.$text-thin;
+
+      & > a::after {
+        content: " - ";
+      }
     }
 
     &_recent {
       color: vars.$secondary;
+
+      & > span:first-child::after {
+        content: " ";
+      }
     }
   }
 

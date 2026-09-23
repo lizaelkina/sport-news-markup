@@ -3,9 +3,12 @@ section#recent-news.recent-news.page__double.js-section
     | Recent News
   div.recent-news__container
     div.recent-news__left
-      +new-recent('./img/recent-new-1',
-        'Day 5 Highlights',
-        'Baku 2023 World Taekwondo Championships')
+      +new-recent({
+        img: './img/recent-new-1',
+        day: 'Day 5',
+        caption: 'Highlights',
+        title: 'Baku 2023 World Taekwondo Championships',
+      })
     div.recent-news__right
       ul.recent-news__list
         li

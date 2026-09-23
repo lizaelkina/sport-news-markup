@@ -6,6 +6,10 @@ mixin svg(name)
   svg(data-svg=name aria-hidden='true' role='presentation')&attributes(attributes)
     use(href=`./img/sprites/sprite.svg#${name}`)
 
+mixin date(isoDate)
+  - const text = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(isoDate))
+  time(datetime=isoDate)&attributes(attributes)= text
+
 mixin button-prev
   button(type='button').swiper-prev&attributes(attributes)
     +svg('icon-arrow-slide').swiper-prev__svg
@@ -32,21 +36,25 @@ mixin slide(src, label, description, title, subtitle)
       if subtitle
         p.slide__subtitle= subtitle
 
-mixin new-today(src, description, title)
+mixin new-today(data)
   article.new&attributes(attributes)
-    a(href='#').new__wrapper
-      +img(src, title)(loading='eager').new__img.new__img_today
-      hgroup.new__container.new__container_today
-        p.new__description.new__description_today= description
-        h3.new__title.new__title_today= title
+    +img(data.img, '')(loading='eager').new__img.new__img_today
+    div.new__container.new__container_today
+      div.new__description.new__description_today
+        a(href='#')= data.source
+        +date(data.date)
+      h3
+        a(href='#').new__title.new__title_today= data.title
 
-mixin new-recent(src, description, title)
+mixin new-recent(data)
   article.new&attributes(attributes)
-    a(href='#').new__wrapper
-      +img(src, title).new__img.new__img_recent
-      hgroup.new__container.new__container_recent
-        p.new__description.new__description_recent= description
-        h3.new__title.new__title_recent= title
+    +img(data.img, '').new__img.new__img_recent
+    div.new__container.new__container_recent
+      div.new__description.new__description_recent
+        span= data.day
+        span= data.caption
+      h3
+        a(href='#').new__title.new__title_recent= data.title
 
 mixin new-trending(src, description, title, subtitle)
   article.new-trending&attributes(attributes)

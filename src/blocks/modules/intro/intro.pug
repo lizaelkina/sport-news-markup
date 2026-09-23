@@ -19,10 +19,16 @@ section#intro.intro.page__intro.js-section
           | Today
       ul.intro__news
         li
-          +new-today('./img/intro-new-1',
-            'Race98 - 03 June 2023',
-            'Ethiopian runners took the top four spots')
+          +new-today({
+            img: './img/intro-new-1',
+            source: 'Race98',
+            date: '2023-06-03',
+            title: 'Ethiopian runners took the top four spots',
+          })
         li
-          +new-today('./img/intro-new-2',
-            'INDYCAR - 03 June 2023',
-            'IndyCar Detroit: Dixon quickest in second practice')
+          +new-today({
+            img: './img/intro-new-2',
+            source: 'INDYCAR',
+            date: '2023-06-03',
+            title: 'IndyCar Detroit: Dixon quickest in second practice',
+          })
