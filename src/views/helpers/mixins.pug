@@ -8,7 +8,7 @@ mixin svg(name)
 
 mixin date(isoDate)
   - const text = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(isoDate))
-  time(datetime=isoDate)&attributes(attributes)= text
+  time(datetime=isoDate).date-separator&attributes(attributes)= text
 
 mixin button-prev
   button(type='button').swiper-prev&attributes(attributes)
@@ -24,17 +24,6 @@ mixin link(name, href)
 mixin social(svg, name)
   a.social(href='#' aria-label=name)&attributes(attributes)
     +svg(svg).social__svg
-
-mixin slide(src, label, description, title, subtitle)
-  article.slide&attributes(attributes)
-    +img(src, title).slide__img
-    div.label
-      span.label__text= label
-    a.slide__title-wrapper(href='#')
-      p.slide__description= description
-      h3.slide__title= title
-      if subtitle
-        p.slide__subtitle= subtitle
 
 mixin new-today(data)
   article.new&attributes(attributes)
@@ -52,9 +41,22 @@ mixin new-recent(data)
     div.new__container.new__container_recent
       div.new__description.new__description_recent
         span= data.day
-        span= data.caption
+        span.text-separator= data.caption
       h3
         a(href='#').new__title.new__title_recent= data.title
+
+mixin slide(data)
+  article.slide&attributes(attributes)
+    +img(data.img, '').slide__img
+    div.label
+      span.label__text= data.label
+    div.slide__title-wrapper
+      div.slide__description= description
+        span= data.source
+        +date(data.date)
+      h3
+        a(href='#').slide__title= data.title
+      p.slide__subtitle= data.subtitle
 
 mixin new-trending(src, description, title, subtitle)
   article.new-trending&attributes(attributes)

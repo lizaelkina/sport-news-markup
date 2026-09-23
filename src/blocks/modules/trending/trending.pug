@@ -20,7 +20,10 @@ section#trending.trending.page__section.js-section
             'Ryan Garcia is fighting again, this time on social media',
             'Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on')
     div.trending__right
-      +slide('./img/trending-new-1',
-        'Cycling',
-        'Debits - 03 June 2023',
-        'Discover the member benefits of USA cycling!').slide_small
+      +slide({
+        img: './img/trending-new-1',
+        label: 'Cycling',
+        source: 'Debits',
+        date: '2023-06-03',
+        title: 'Discover the member benefits of USA cycling!',
+      }).slide_small

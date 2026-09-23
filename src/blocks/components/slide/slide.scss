@@ -44,13 +44,6 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-    }
   }
 
   &__description {
@@ -71,6 +64,13 @@
     line-height: 114%;
     text-transform: uppercase;
     color: vars.$accent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
   }
 
   &__subtitle {

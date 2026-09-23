@@ -2,30 +2,38 @@ section.slider.page__section(aria-label='News photo gallery')
   div.slider__container
     div.swiper.js-swiper-slider
       div.swiper-wrapper
-        +slide('./img/slide-1',
-          'Football',
-          'Agence France-Presse – 04 June 2023',
-          'Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms',
-          'The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals'
-          ).slide_big.swiper-slide
-        +slide('./img/slide-2',
-          'Basketball',
-          'ESPN – 18 June 2023',
-          'BOSTON CELTICS CLAIM NBA CHAMPIONSHIP WITH GAME 7 VICTORY',
-          'Jayson Tatum`s career - high 51 points led the Celtics to a decisive 112-88 victory over the Philadelphia 76ers in the championship - deciding Game 7'
-          ).slide_big.swiper-slide
-        +slide('./img/slide-3',
-          'Football',
-          'The Guardian – 14 July 2023',
-          'ALCARAZ DEFENDS WIMBLEDON TITLE IN THRILLING FIVE-SETTER',
-          'The Spanish star defeated Novak Djokovic 6-4, 3-6, 6-3, 4-6, 6-3 in an epic final lasting over four hours on Centre Court'
-          ).slide_big.swiper-slide
-        +slide('./img/slide-4',
-          'Formula 1',
-          'Autosport – 31 May 2023',
-          'ANTONELLI MAKES HISTORY AT MONACO GRAND PRIX',
-          'The young Mercedes driver became the youngest-ever winner of the prestigious Monaco Grand Prix'
-          ).slide_big.swiper-slide
+        +slide({
+          img: './img/slide-1',
+          label: 'Football',
+          source: 'Agence France-Presse',
+          date: '2023-06-04',
+          title: 'Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms',
+          subtitle: 'The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals',
+        }).slide_big.swiper-slide
+        +slide({
+          img: './img/slide-2',
+          label: 'Basketball',
+          source: 'ESPN',
+          date: '2023-06-03',
+          title: 'Boston Celtics claim NBA Championship with game 7 victory',
+          subtitle: 'Jayson Tatum`s career - high 51 points led the Celtics to a decisive 112-88 victory over the Philadelphia 76ers in the championship - deciding Game 7',
+        }).slide_big.swiper-slide
+        +slide({
+          img: './img/slide-3',
+          label: 'Tennis',
+          source: 'The Guardian',
+          date: '2023-06-02',
+          title: 'Alcaraz defends Wimbledon title in thrilling five-setter',
+          subtitle: 'The Spanish star defeated Novak Djokovic 6-4, 3-6, 6-3, 4-6, 6-3 in an epic final lasting over four hours on Centre Court',
+        }).slide_big.swiper-slide
+        +slide({
+          img: './img/slide-4',
+          label: 'Formula 1',
+          source: 'Autosport',
+          date: '2023-06-01',
+          title: 'Antonelli makes history at Monaco Grand Prix',
+          subtitle: 'The young Mercedes driver became the youngest-ever winner of the prestigious Monaco Grand Prix',
+        }).slide_big.swiper-slide
     div.slider__controls.swiper-controls
       +button-prev.js-slider-prev
       div.swiper-pagination

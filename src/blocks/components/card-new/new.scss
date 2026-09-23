@@ -65,18 +65,10 @@
 
     &_today {
       color: vars.$text-thin;
-
-      & > a::after {
-        content: " - ";
-      }
     }
 
     &_recent {
       color: vars.$secondary;
-
-      & > span:first-child::after {
-        content: " ";
-      }
     }
   }
 
