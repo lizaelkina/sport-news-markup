@@ -18,6 +18,7 @@
   &__img {
     @include mixins.img-hover;
 
+    z-index: -1;
     height: 100%;
     background-color: vars.$button;
 
@@ -35,19 +36,24 @@
   &__container {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
     width: 100%;
     gap: 4px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
     &_today {
+      margin-top: -130px;
       padding: 64px 18px 12px;
       background: vars.$block-gradient;
     }
 
     &_recent {
+      margin-top: -83px;
       padding: 16px 18px 12px;
       background: vars.$block-accent-gradient;
       backdrop-filter: blur(100px);
@@ -74,16 +80,31 @@
 
   &__source {
     @include mixins.source-hover;
+
+    position: relative;
+    z-index: 3;
   }
 
   &__title {
+    width: 100%;
+    max-width: 215px;
+    min-height: 40px;
+  }
+
+  &__title-link {
     @include mixins.text-overflow(5);
 
-    min-height: 40px;
     font-family: vars.$font-accent;
     font-weight: 400;
     font-size: 16px;
     line-height: 124%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
 
     &_today {
       color: vars.$primary;

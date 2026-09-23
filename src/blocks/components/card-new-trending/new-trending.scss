@@ -65,9 +65,12 @@
 
   &__source {
     @include mixins.source-hover;
+
+    position: relative;
+    z-index: 2;
   }
 
-  &__title {
+  &__title-link {
     @include mixins.text-overflow(2);
 
     width: 100%;
@@ -77,6 +80,13 @@
     font-size: 18px;
     line-height: 137%;
     color: vars.$primary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
   }
 
   &__subtitle {

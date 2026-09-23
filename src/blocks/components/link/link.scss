@@ -2,7 +2,7 @@
 @use "../../../styles/helpers/mixins";
 
 .link {
-  @include mixins.link-hover;
+  @include mixins.link-hover(vars.$text-thin);
 
   font-weight: 400;
   font-size: 15px;

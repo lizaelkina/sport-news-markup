@@ -1,7 +1,7 @@
 @use "variables" as vars;
 
 // hover
-@mixin link-hover() {
+@mixin link-hover($color) {
   position: relative;
 
   &::after {
@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: .5px;
-    background-color: vars.$text-thin;
+    background-color: $color;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform .5s ease;

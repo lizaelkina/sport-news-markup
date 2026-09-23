@@ -46,7 +46,7 @@
     color: vars.$text-thin;
   }
 
-  &__title {
+  &__title-link {
     @include mixins.text-overflow(3);
 
     font-family: vars.$font-accent;

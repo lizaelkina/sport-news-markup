@@ -30,10 +30,10 @@ mixin new-today(data)
     +img(data.img, '')(loading='eager').new__img.new__img_today
     div.new__container.new__container_today
       div.new__description.new__description_today
-        a(href='#').new__source= data.source
+        a(href='#' target='_blank').new__source= data.source
         +date(data.date)
-      h3
-        a(href='#').new__title.new__title_today= data.title
+      h3.new__title
+        a(href='#').new__title-link.new__title-link_today= data.title
 
 mixin new-recent(data)
   article.new&attributes(attributes)
@@ -42,20 +42,20 @@ mixin new-recent(data)
       div.new__description.new__description_recent
         span= data.day
         span.text-separator= data.caption
-      h3
-        a(href='#').new__title.new__title_recent= data.title
+      h3.new__title
+        a(href='#').new__title-link.new__title-link_recent= data.title
 
 mixin slide(data)
   article.slide&attributes(attributes)
     +img(data.img, '').slide__img
     div.label
       span.label__text= data.label
-    div.slide__title-wrapper
-      div.slide__description= description
-        span= data.source
+    div.slide__container
+      div.slide__description
+        span.slide__source= data.source
         +date(data.date)
-      h3
-        a(href='#').slide__title= data.title
+      h3.slide__title
+        a(href='#').slide__title-link= data.title
       p.slide__subtitle= data.subtitle
 
 mixin new-trending(data)
@@ -64,10 +64,10 @@ mixin new-trending(data)
       +img(data.img, '').new-trending__img
     div.new-trending__container
       div.new-trending__description
-        a(href='#').new-trending__source= data.source
+        a(href='#' target='_blank').new-trending__source= data.source
         +date(data.date)
-      h3
-        a(href='#').new-trending__title= data.title
+      h3.new-trending__title
+        a(href='#').new-trending__title-link= data.title
       p.new-trending__subtitle= data.subtitle
 
 mixin new-more(data)
@@ -78,8 +78,8 @@ mixin new-more(data)
       div.new-more__description
         span= data.label
         +date(data.date)
-      h3
-        a(href='#').new-more__title= data.title
+      h3.new-more__title
+        a(href='#').new-more__title-link= data.title
 
 mixin art(data)
   article.art&attributes(attributes)
@@ -93,6 +93,6 @@ mixin art(data)
         span.art__name= data.author
       +date(data.date).art__date
       div.art__title-wrapper
-        h3
-          a(href='#').art__title= data.title
+        h3.art__title
+          a(href='#').art__title-link= data.title
         p.art__subtitle= data.subtitle
