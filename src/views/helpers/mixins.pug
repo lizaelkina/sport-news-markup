@@ -25,7 +25,7 @@ mixin slide(src, label, description, title, subtitle)
   article.slide&attributes(attributes)
     +img(src, title).slide__img
     div.label
-      p.label__text= label
+      span.label__text= label
     a.slide__title-wrapper(href='#')
       p.slide__description= description
       h3.slide__title= title
@@ -70,11 +70,11 @@ mixin art(src, label, photo, author, date, title, subtitle)
     div.art__img-wrapper
       +img(src, title).art__img
     div.label.label_small.art__label
-      p.label__text.label__text_small= label
+      span.label__text.label__text_small= label
     a.art__container(href='#')
       div.art__author
         +img(photo, author).art__photo
-        p.art__name= author
+        span.art__name= author
       time(datetime='2023-06').art__date= date
       hgroup.art__title-wrapper
         h3.art__title= title
