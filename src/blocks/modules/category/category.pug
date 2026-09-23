@@ -1,15 +1,27 @@
-mixin category-card(src, title)
+mixin category-card(data)
   li.category__card
     h3.category__label&attributes(attributes)
-      a(href='#').category__name= title
+      a(href='#').category__name= data.title
     div.category__img-wrapper
-      +img(src, title).category__img
+      +img(data.img, data.title).category__img
 
 section#category.category.page__section.js-section
   h2.category__title
     | Category
   ul.category__list
-    +category-card('./img/category-1', 'Football')
-    +category-card('./img/category-2', 'Basket ball').category__label_bottom
-    +category-card('./img/category-3', 'Car sport')
-    +category-card('./img/category-4', 'Table tennis').category__label_bottom
+    +category-card({
+      img: './img/category-1',
+      title: 'Football',
+    })
+    +category-card({
+      img: './img/category-2',
+      title: 'Basket ball',
+    }).category__label_bottom
+    +category-card({
+      img: './img/category-3',
+      title: 'Car sport',
+    })
+    +category-card({
+      img: './img/category-4',
+      title: 'Table tennis',
+    }).category__label_bottom
