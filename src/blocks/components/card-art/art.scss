@@ -41,13 +41,6 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
   }
 
   &__author {
@@ -63,11 +56,14 @@
   }
 
   &__name {
+    @include mixins.link-hover;
+
     font-weight: 600;
     font-size: 15px;
     line-height: 147%;
     letter-spacing: 0.01em;
     color: vars.$primary;
+    z-index: 2;
   }
 
   &__date {
@@ -76,6 +72,10 @@
     font-size: 14px;
     line-height: 101%;
     color: vars.$text-thin;
+
+    &::before {
+      display: none;
+    }
   }
 
   &__title-wrapper {
@@ -91,6 +91,13 @@
     font-size: clamp(18px, 2vw, 22px);
     line-height: 132%;
     color: vars.$primary;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
   }
 
   &__subtitle {

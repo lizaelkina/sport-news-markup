@@ -81,17 +81,18 @@ mixin new-more(data)
       h3
         a(href='#').new-more__title= data.title
 
-mixin art(src, label, photo, author, date, title, subtitle)
+mixin art(data)
   article.art&attributes(attributes)
     div.art__img-wrapper
-      +img(src, title).art__img
+      +img(data.img, '').art__img
     div.label.label_small.art__label
-      span.label__text.label__text_small= label
-    a(href='#').art__container
-      div.art__author
-        +img(photo, author).art__photo
-        span.art__name= author
-      time(datetime='2023-06').art__date= date
-      hgroup.art__title-wrapper
-        h3.art__title= title
-        p.art__subtitle= subtitle
+      span.label__text.label__text_small= data.label
+    div.art__container
+      a(href='#' target='_blank').art__author
+        +img(data.photo, data.author).art__photo
+        span.art__name= data.author
+      +date(data.date).art__date
+      div.art__title-wrapper
+        h3
+          a(href='#').art__title= data.title
+        p.art__subtitle= data.subtitle
