@@ -12,105 +12,112 @@
   }
 
   &__container {
-    display: flex;
     flex: 1;
     width: 100%;
     padding: 20px 0;
     border-radius: vars.$block-radius;
     background-color: vars.$secondary;
     overflow-x: auto;
-  }
 
-  &__table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-width: 528px;
-    counter-reset: place;
-  }
-
-  &__table-header {
-    display: grid;
-    grid-template-columns: 1fr repeat(7, 25px);
-    align-items: center;
-    column-gap: 18px;
-    margin-bottom: 16px;
-    padding: 0 30px;
-  }
-
-  &__table-title {
-    text-align: center;
-    font-family: vars.$font-accent;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-    color: vars.$primary;
-
-    &_club {
-      text-align: start;
+    &:focus-visible {
+      outline: 2px solid vars.$primary;
+      outline-offset: 2px;
     }
   }
 
-  &__table-row {
-    display: grid;
-    grid-template-columns: 1fr repeat(7, 25px);
-    align-items: center;
-    column-gap: 18px;
-    padding: 7px 30px;
+  &__table {
+    width: 100%;
+    min-width: 528px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-family: vars.$font-accent;
+    line-height: 100%;
+    color: vars.$primary;
+  }
+
+  &__row {
     border-bottom: .5px solid vars.$button;
 
     &:last-child {
-      padding-bottom: 0;
       border-bottom: none;
     }
   }
 
-  &__table-club {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  &__head {
+    padding: 0 0 16px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
 
-    &::before {
-      counter-increment: place;
-      content: counter(place);
-      font-family: vars.$font-accent;
-      font-weight: 600;
-      font-size: 13px;
-      line-height: 100%;
-      color: vars.$primary;
+    &_club {
+      padding-left: 30px;
+      text-align: start;
     }
   }
 
-  &__table-emblem {
+  &__abbr {
+    text-decoration: none;
+    cursor: help;
+  }
+
+  &__club {
+    padding: 7px 0 7px 30px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: start;
+  }
+
+  &__club-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__place {
+    flex-shrink: 0;
+  }
+
+  &__emblem {
     flex-shrink: 0;
     margin-left: 5px;
     width: 24px;
     height: 24px;
   }
 
-  &__table-name {
+  &__name {
     @include mixins.text-overflow(1);
-
-    font-family: vars.$font-accent;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 100%;
-    color: vars.$primary;
   }
 
-  &__table-text {
-    text-align: center;
-    font-family: vars.$font-accent;
+  &__num {
+    width: 43px;
+    padding-left: 18px;
+
+    &:last-child {
+      width: 73px;
+      padding-right: 30px;
+    }
+  }
+
+  &__cell {
+    padding-top: 7px;
+    padding-bottom: 7px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 100%;
-    color: vars.$primary;
+    text-align: center;
+  }
+
+  &__row:last-child &__club, &__row:last-child &__cell {
+    padding-bottom: 0;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .clubs-ranking__table-header, .clubs-ranking__table-row {
+  .clubs-ranking__head_club, .clubs-ranking__club {
     padding-left: 16px;
+  }
+
+  .clubs-ranking__num:last-child {
+    width: 59px;
     padding-right: 16px;
   }
 }

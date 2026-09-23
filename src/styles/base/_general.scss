@@ -31,6 +31,10 @@ img {
   object-fit: cover;
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

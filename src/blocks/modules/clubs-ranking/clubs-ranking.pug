@@ -1,79 +1,45 @@
-mixin club(img, name)
-  div.clubs-ranking__table-club
-    +img(img, name).clubs-ranking__table-emblem
-    p.clubs-ranking__table-name= name
+-
+  const columns = [
+    {key: 'gp', abbr: 'GP', title: 'Games played'},
+    {key: 'w', abbr: 'W', title: 'Won'},
+    {key: 'd', abbr: 'D', title: 'Drawn'},
+    {key: 'l', abbr: 'L', title: 'Lost'},
+    {key: 'f', abbr: 'F', title: 'Goals for'},
+    {key: 'a', abbr: 'A', title: 'Goals against'},
+    {key: 'gd', abbr: 'GD', title: 'Goal difference'},
+  ];
+
+  const clubs = [
+    {name: 'Manchester City', img: './img/club-mancity', gp: 38, w: 29, d: 6, l: 3, f: 99, a: 26, gd: 73},
+    {name: 'Liverpool', img: './img/club-liverpool', gp: 38, w: 28, d: 8, l: 2, f: 94, a: 26, gd: 68},
+    {name: 'Chelsea', img: './img/club-chelsea', gp: 38, w: 21, d: 11, l: 6, f: 76, a: 33, gd: 43},
+    {name: 'Tottenham Hotspur', img: './img/club-tottenham', gp: 38, w: 22, d: 5, l: 11, f: 69, a: 40, gd: 29},
+    {name: 'Arsenal', img: './img/club-arsenal', gp: 38, w: 22, d: 3, l: 13, f: 61, a: 48, gd: 13},
+    {name: 'Manchester United', img: './img/club-manutd', gp: 38, w: 16, d: 10, l: 12, f: 57, a: 57, gd: 0},
+  ];
 
 section#clubs-ranking.clubs-ranking.page__double.js-section
-  h2.clubs-ranking__title
+  h2#clubs-ranking-title.clubs-ranking__title
     | Clubs Ranking
-  div.clubs-ranking__container
-    ul.clubs-ranking__table(aria-label='table')
-      li.clubs-ranking__table-header(aria-label='rowheader' data-aos="fade-down")
-        p.clubs-ranking__table-title.clubs-ranking__table-title_club Club
-        p.clubs-ranking__table-title GP
-        p.clubs-ranking__table-title W
-        p.clubs-ranking__table-title D
-        p.clubs-ranking__table-title L
-        p.clubs-ranking__table-title F
-        p.clubs-ranking__table-title A
-        p.clubs-ranking__table-title GD
-
-      li.clubs-ranking__table-row(aria-label='row' data-aos="fade-down")
-        +club('./img/club-mancity', 'Manchester City')
-        p.clubs-ranking__table-text 38
-        p.clubs-ranking__table-text 29
-        p.clubs-ranking__table-text 6
-        p.clubs-ranking__table-text 3
-        p.clubs-ranking__table-text 99
-        p.clubs-ranking__table-text 26
-        p.clubs-ranking__table-text 73
-
-      li.clubs-ranking__table-row(aria-label='row' data-aos="fade-down")
-        +club('./img/club-liverpool', 'Liverpool')
-        p.clubs-ranking__table-text 38
-        p.clubs-ranking__table-text 28
-        p.clubs-ranking__table-text 8
-        p.clubs-ranking__table-text 2
-        p.clubs-ranking__table-text 94
-        p.clubs-ranking__table-text 26
-        p.clubs-ranking__table-text 68
-
-      li.clubs-ranking__table-row(aria-label='row' data-aos="fade-down")
-        +club('./img/club-chelsea', 'Chelsea')
-        p.clubs-ranking__table-text 38
-        p.clubs-ranking__table-text 21
-        p.clubs-ranking__table-text 11
-        p.clubs-ranking__table-text 6
-        p.clubs-ranking__table-text 76
-        p.clubs-ranking__table-text 33
-        p.clubs-ranking__table-text 43
-
-      li.clubs-ranking__table-row(aria-label='row' data-aos="fade-down")
-        +club('./img/club-tottenham', 'Tottenham Hotspur')
-        p.clubs-ranking__table-text 38
-        p.clubs-ranking__table-text 22
-        p.clubs-ranking__table-text 5
-        p.clubs-ranking__table-text 11
-        p.clubs-ranking__table-text 69
-        p.clubs-ranking__table-text 40
-        p.clubs-ranking__table-text 29
-
-      li.clubs-ranking__table-row(aria-label='row' data-aos="fade-down")
-        +club('./img/club-arsenal', 'Arsenal')
-        p.clubs-ranking__table-text 38
-        p.clubs-ranking__table-text 22
-        p.clubs-ranking__table-text 5
-        p.clubs-ranking__table-text 11
-        p.clubs-ranking__table-text 69
-        p.clubs-ranking__table-text 40
-        p.clubs-ranking__table-text 29
-
-      li.clubs-ranking__table-row(aria-label='row' data-aos="fade-down")
-        +club('./img/club-manutd', 'Manchester United')
-        p.clubs-ranking__table-text 38
-        p.clubs-ranking__table-text 22
-        p.clubs-ranking__table-text 5
-        p.clubs-ranking__table-text 11
-        p.clubs-ranking__table-text 69
-        p.clubs-ranking__table-text 40
-        p.clubs-ranking__table-text 29
+  div.clubs-ranking__container(
+    role='region'
+    aria-labelledby='clubs-ranking-title'
+    tabindex='0')
+    table.clubs-ranking__table(aria-labelledby='clubs-ranking-title')
+      thead
+        tr.clubs-ranking__row(data-aos='fade-down')
+          th.clubs-ranking__head.clubs-ranking__head_club(scope='col') Club
+          each column in columns
+            th.clubs-ranking__head.clubs-ranking__num(scope='col')
+              abbr.clubs-ranking__abbr(title=column.title aria-hidden='true')= column.abbr
+              span.visually-hidden= column.title
+      tbody
+        each club, index in clubs
+          tr.clubs-ranking__row(data-aos='fade-down')
+            th.clubs-ranking__club(scope='row')
+              span.clubs-ranking__club-inner
+                span.clubs-ranking__place= index + 1
+                +img(club.img, '').clubs-ranking__emblem
+                span.clubs-ranking__name= club.name
+            each column in columns
+              td.clubs-ranking__cell.clubs-ranking__num= club[column.key]
