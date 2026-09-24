@@ -67,3 +67,17 @@
   line-height: 136%;
   color: vars.$primary;
 }
+
+// card meta info
+@mixin card-meta($color: vars.$text-thin) {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 110%;
+  color: $color;
+}
+
+@mixin date-separator {
+  &::before {
+    content: " - ";
+  }
+}

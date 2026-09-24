@@ -76,17 +76,10 @@
 
   &__description {
     @include mixins.text-overflow(1);
-
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-
-    &_today {
-      color: vars.$text-thin;
-    }
+    @include mixins.card-meta;
 
     &_recent {
-      color: vars.$secondary;
+      @include mixins.card-meta(vars.$secondary);
     }
   }
 
@@ -95,39 +88,16 @@
 
     position: relative;
     z-index: 3;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
   }
 
   &__date {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
-
-    &::before {
-      content: " - ";
-    }
+    @include mixins.date-separator;
   }
 
   &__day {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$secondary;
-
     &::after {
       content: " ";
     }
-  }
-
-  &__caption {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$secondary;
   }
 
   &__title {

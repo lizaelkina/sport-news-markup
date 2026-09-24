@@ -44,9 +44,9 @@ mixin new-recent(data)
   article.new.new_recent&attributes(attributes)
     +img(data.img, '').new__img.new__img_recent
     div.new__container.new__container_recent
-      div.new__description
+      div.new__description.new__description_recent
         span.new__day= data.day
-        span.new__caption= data.caption
+        span= data.caption
       h3.new__title
         a(href='#').new__link.new__link_recent= data.title
 
@@ -57,7 +57,7 @@ mixin slide(data)
       span.label__text= data.label
     div.slide__container
       div.slide__description
-        span.slide__source= data.source
+        span= data.source
         +date(data.date).slide__date
       h3.slide__title
         a(href='#').slide__link= data.title
@@ -81,7 +81,7 @@ mixin new-more(data)
       +img(data.img, '').new-more__img
     div.new-more__container
       div.new-more__description
-        span.new-more__label= data.label
+        span= data.label
         +date(data.date).new-more__date
       h3.new-more__title
         a(href='#').new-more__link= data.title

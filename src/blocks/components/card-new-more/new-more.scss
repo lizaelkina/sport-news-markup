@@ -39,29 +39,11 @@
 
   &__description {
     @include mixins.text-overflow(1);
-
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
-  }
-
-  &__label {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
+    @include mixins.card-meta;
   }
 
   &__date {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
-
-    &::before {
-      content: " - ";
-    }
+    @include mixins.date-separator;
   }
 
   &__link {

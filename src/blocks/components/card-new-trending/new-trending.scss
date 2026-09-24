@@ -56,11 +56,7 @@
 
   &__description {
     @include mixins.text-overflow(1);
-
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
+    @include mixins.card-meta;
   }
 
   &__source {
@@ -68,21 +64,10 @@
 
     position: relative;
     z-index: 2;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
   }
 
   &__date {
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 110%;
-    color: vars.$text-thin;
-
-    &::before {
-      content: " - ";
-    }
+    @include mixins.date-separator;
   }
 
   &__title {

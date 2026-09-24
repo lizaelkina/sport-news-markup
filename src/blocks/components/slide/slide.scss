@@ -55,22 +55,8 @@
     color: vars.$accent;
   }
 
-  &__source {
-    font-weight: 400;
-    font-size: clamp(14px, 3vw, 18px);
-    line-height: 110%;
-    color: vars.$accent;
-  }
-
   &__date {
-    font-weight: 400;
-    font-size: clamp(14px, 3vw, 18px);
-    line-height: 110%;
-    color: vars.$accent;
-
-    &::before {
-      content: " - ";
-    }
+    @include mixins.date-separator;
   }
 
   &__title {
