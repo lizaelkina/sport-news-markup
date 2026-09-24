@@ -30,7 +30,7 @@ mixin new-today(data)
     +img(data.img, '')(loading='eager').new__img.new__img_today
     div.new__container.new__container_today
       div.new__description.new__description_today
-        a(href='#' target='_blank').new__source= data.source
+        a(href='#').new__source= data.source
         +date(data.date)
       h3.new__title
         a(href='#').new__title-link.new__title-link_today= data.title
@@ -64,7 +64,7 @@ mixin new-trending(data)
       +img(data.img, '').new-trending__img
     div.new-trending__container
       div.new-trending__description
-        a(href='#' target='_blank').new-trending__source= data.source
+        a(href='#').new-trending__source= data.source
         +date(data.date)
       h3.new-trending__title
         a(href='#').new-trending__title-link= data.title
@@ -88,8 +88,8 @@ mixin art(data)
     div.label.label_small.art__label
       span.label__text.label__text_small= data.label
     div.art__container
-      a(href='#' target='_blank').art__author
-        +img(data.photo, data.author).art__photo
+      a(href='#').art__author
+        +img(data.photo, '').art__photo
         span.art__name= data.author
       +date(data.date).art__date
       div.art__title-wrapper

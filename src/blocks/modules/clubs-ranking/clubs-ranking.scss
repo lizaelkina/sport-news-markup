@@ -18,11 +18,6 @@
     border-radius: vars.$block-radius;
     background-color: vars.$secondary;
     overflow-x: auto;
-
-    &:focus-visible {
-      outline: 2px solid vars.$primary;
-      outline-offset: 2px;
-    }
   }
 
   &__table {
@@ -56,7 +51,6 @@
   }
 
   &__abbr {
-    text-decoration: none;
     cursor: help;
   }
 
