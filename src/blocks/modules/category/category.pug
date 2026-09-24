@@ -1,6 +1,6 @@
 mixin category-card(data)
   li.category__card
-    h3.category__label(class=data.labelBottom ? 'category__label_bottom': '')
+    h3.category__label(class={'category__label_bottom': data.labelBottom})
       a(href='#').category__name= data.title
     div.category__img-wrapper
       +img(data.img, '').category__img
