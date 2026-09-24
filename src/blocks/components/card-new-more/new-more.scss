@@ -64,7 +64,7 @@
     }
   }
 
-  &__title-link {
+  &__link {
     @include mixins.text-overflow(3);
 
     font-family: vars.$font-accent;

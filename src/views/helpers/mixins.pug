@@ -47,7 +47,7 @@ mixin new-recent(data)
       div.new__description
         span.new__day= data.day
         span.new__caption= data.caption
-      h3.new-recent__title
+      h3.new__title
         a(href='#').new__link.new__link_recent= data.title
 
 mixin slide(data)
@@ -60,7 +60,7 @@ mixin slide(data)
         span.slide__source= data.source
         +date(data.date).slide__date
       h3.slide__title
-        a(href='#').slide__title-link= data.title
+        a(href='#').slide__link= data.title
       p.slide__subtitle= data.subtitle
 
 mixin new-trending(data)
@@ -72,7 +72,7 @@ mixin new-trending(data)
         a(href='#').new-trending__source= data.source
         +date(data.date).new-trending__date
       h3.new-trending__title
-        a(href='#').new-trending__title-link= data.title
+        a(href='#').new-trending__link= data.title
       p.new-trending__subtitle= data.subtitle
 
 mixin new-more(data)
@@ -84,7 +84,7 @@ mixin new-more(data)
         span.new-more__label= data.label
         +date(data.date).new-more__date
       h3.new-more__title
-        a(href='#').new-more__title-link= data.title
+        a(href='#').new-more__link= data.title
 
 mixin art(data)
   article.art&attributes(attributes)
@@ -99,5 +99,5 @@ mixin art(data)
       +date(data.date).art__date
       div.art__title-wrapper
         h3.art__title
-          a(href='#').art__title-link= data.title
+          a(href='#').art__link= data.title
         p.art__subtitle= data.subtitle

@@ -85,11 +85,14 @@
     }
   }
 
-  &__title-link {
-    @include mixins.text-overflow(2);
-
+  &__title {
     width: 100%;
     max-width: 245px;
+  }
+
+  &__link {
+    @include mixins.text-overflow(2);
+
     font-family: vars.$font-accent;
     font-weight: 500;
     font-size: 18px;
