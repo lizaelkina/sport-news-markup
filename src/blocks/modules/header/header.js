@@ -14,18 +14,6 @@
 
   let isScrolledLast = false;
 
-  window.addEventListener('scroll', () => {
-    const issScrolledNow = window.scrollY > 50;
-    if (issScrolledNow !== isScrolledLast) {
-      if (issScrolledNow) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-      isScrolledLast = issScrolledNow;
-    }
-  });
-
   navItems.forEach((navItem) => {
     const link = navItem.querySelector('a[href^="#"]');
     const section = link?.hash
@@ -150,4 +138,13 @@
   setActiveNavItem(initialActiveItem);
   desktopMediaQuery.addEventListener('change', updateScrollSpyState);
   updateScrollSpyState(desktopMediaQuery);
+
+  window.addEventListener('scroll', () => {
+    const isScrolled = window.scrollY > 50;
+
+    if (isScrolled !== isScrolledLast) {
+      header.classList.toggle('scrolled', isScrolled);
+      isScrolledLast = isScrolled;
+    }
+  }, {passive: true});
 })();
