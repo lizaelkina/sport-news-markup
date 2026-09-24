@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.js-swiper-articles',
     {
       direction: 'horizontal',
-      loop: true,
       slidesPerView: 3,
       grabCursor: true,
       spaceBetween: 30,

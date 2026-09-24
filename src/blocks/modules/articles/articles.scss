@@ -8,10 +8,17 @@
 
   &__title {
     @include mixins.section-title;
+
+    padding-left: 16px;
+  }
+
+  &__swiper {
+    padding: 0 16px;
   }
 
   &__controls {
     margin-top: 18px;
+    padding-left: 16px;
   }
 }
 
