@@ -7,7 +7,12 @@ mixin svg(name)
     use(href=`./img/sprites/sprite.svg#${name}`)
 
 mixin date(isoDate)
-  - const text = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(isoDate))
+  -
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate)) {
+      throw new Error(`+date: expected YYYY-MM-DD, got "${isoDate}"`);
+    }
+
+    const text = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(isoDate));
   time(datetime=isoDate)&attributes(attributes)= text
 
 mixin button-prev
