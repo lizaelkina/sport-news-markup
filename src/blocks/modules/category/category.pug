@@ -1,6 +1,6 @@
 mixin category-card(data)
   li.category__card
-    h3.category__label&attributes(attributes)
+    h3.category__label(class=data.labelBottom ? 'category__label_bottom': '')
       a(href='#').category__name= data.title
     div.category__img-wrapper
       +img(data.img, '').category__img
@@ -9,23 +9,21 @@ section#category.category.page__section.js-section
   h2.category__title
     | Category
   ul.category__list
-
     +category-card({
       img: './img/category-1',
       title: 'Football',
     })
-
     +category-card({
       img: './img/category-2',
       title: 'Basket ball',
-    }).category__label_bottom
-
+      labelBottom: true,
+    })
     +category-card({
       img: './img/category-3',
       title: 'Car sport',
     })
-
     +category-card({
       img: './img/category-4',
       title: 'Table tennis',
-    }).category__label_bottom
+      labelBottom: true,
+    })

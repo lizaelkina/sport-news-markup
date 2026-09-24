@@ -72,10 +72,6 @@
     font-size: 14px;
     line-height: 101%;
     color: vars.$text-thin;
-
-    &::before {
-      display: none;
-    }
   }
 
   &__title-wrapper {

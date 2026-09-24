@@ -68,6 +68,21 @@
 
     position: relative;
     z-index: 2;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 110%;
+    color: vars.$text-thin;
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 110%;
+    color: vars.$text-thin;
+
+    &::before {
+      content: " - ";
+    }
   }
 
   &__title-link {

@@ -47,11 +47,3 @@ abbr[title] {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-.date-separator::before {
-  content: " - ";
-}
-
-.text-separator::before {
-  content: " ";
-}
