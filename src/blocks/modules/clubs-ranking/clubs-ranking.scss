@@ -106,6 +106,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .clubs-ranking__row {
+    border-bottom: 1px solid vars.$button;
+  }
+
   .clubs-ranking__head_club, .clubs-ranking__club {
     padding-left: 16px;
   }
