@@ -1,5 +1,5 @@
 mixin img(src, alt)
-  - attributes.loading = attributes.loading || 'lazy'
+  - attributes.loading = attributes.loading === 'eager' ? false : attributes.loading || 'lazy'
   img(src=src + '.webp', alt=alt)&attributes(attributes)
 
 mixin svg(name)
